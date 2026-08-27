@@ -218,13 +218,61 @@
     </div>
   </section>
 
-  <!-- ========== 6. CTA FINAL ========== -->
+  <!-- ========== 6. CONTACT ========== -->
+  <section class="contact" id="contact">
+    <span class="halo halo--a"></span>
+
+    <div class="contact-in">
+      <div class="contact-intro">
+        <p class="eyebrow eyebrow--on-green"><span class="rule"></span>Avant de vous décider</p>
+        <h2 class="contact-title">Une question&nbsp;? <em>Écrivons-nous.</em></h2>
+        <p class="contact-lead">Dites-moi ce que vous aimeriez savoir&nbsp;: le déroulé d'une séance, le rythme qui vous conviendrait, ou simplement si cet accompagnement peut vous correspondre. Aucune question n'est de trop.</p>
+      </div>
+
+      <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="cf-hp"><label>Laissez ce champ vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="cf-head">
+          <span>Écrire à Amélie</span>
+          <span>Sans engagement</span>
+        </div>
+
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="cf-prenom">Prénom</label>
+            <input id="cf-prenom" name="prenom" type="text" autocomplete="given-name" placeholder="Votre prénom" required>
+          </div>
+          <div class="cf-field">
+            <label for="cf-nom">Nom</label>
+            <input id="cf-nom" name="nom" type="text" autocomplete="family-name" placeholder="Votre nom" required>
+          </div>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-email">Adresse e-mail</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="vous@email.com" required>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-message">Votre message</label>
+          <textarea id="cf-message" name="message" rows="3" placeholder="Ce que vous aimeriez savoir…" required></textarea>
+        </div>
+
+        <button class="btn btn--green cf-submit" type="submit">Envoyer ma demande</button>
+        <p class="cf-note">Vos informations ne servent qu'à vous répondre. Elles ne sont ni revendues, ni utilisées pour autre chose.</p>
+        <p class="cf-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== 7. CTA FINAL ========== -->
   <section class="final">
     <span class="halo halo--a"></span>
     <div class="final-orb" aria-hidden="true"></div>
     <p class="final-title">Se choisir soi, ce n'est pas se fermer aux autres. C'est apprendre à ne plus s'oublier.</p>
     <div class="final-row">
-      <a class="btn btn--ivory" href="#" aria-disabled="true">Réserver mon premier échange</a>
+      <a class="btn btn--green" href="#" aria-disabled="true">Réserver mon premier échange</a>
       <span class="final-note">45 minutes · 50 € · sans engagement</span>
     </div>
   </section>
@@ -308,6 +356,44 @@
   document.querySelectorAll('[aria-disabled="true"]').forEach(function (el) {
     el.addEventListener('click', function (e) { e.preventDefault(); });
   });
+
+  /* --- Formulaire de contact : envoi sans quitter la page ---
+     Netlify Forms accepte un POST urlencode sur "/" contenant form-name.
+     Si le JS echoue, le formulaire part en POST classique : rien n'est perdu. */
+  var form = document.querySelector('.contact-form');
+  if (form) {
+    var status = form.querySelector('.cf-status');
+    var submit = form.querySelector('.cf-submit');
+    var labelInitial = submit.textContent;
+
+    form.addEventListener('submit', function (e) {
+      if (!form.checkValidity()) return;          /* laisse le navigateur signaler */
+      e.preventDefault();
+
+      submit.disabled = true;
+      submit.textContent = 'Envoi…';
+      status.className = 'cf-status';
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          form.reset();
+          status.textContent = 'Merci, votre message est bien parti. Amélie vous répondra par e-mail.';
+          status.className = 'cf-status is-shown';
+          submit.textContent = 'Message envoyé';
+        })
+        .catch(function () {
+          status.textContent = "L'envoi n'a pas abouti. Réessayez, ou écrivez directement par e-mail.";
+          status.className = 'cf-status is-shown is-error';
+          submit.disabled = false;
+          submit.textContent = labelInitial;
+        });
+    });
+  }
 })();
 </script>
 </body>
