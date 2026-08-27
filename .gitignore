@@ -1,0 +1,23 @@
+# Sauvegardes locales d'avant la mise sous Git — l'historique les remplace
+*.bak
+*.bak2
+
+# Systeme
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editeurs
+.vscode/
+.idea/
+*.swp
+
+# Dependances / sorties eventuelles
+node_modules/
+.netlify/
+
+# Documentation de travail — reste strictement locale.
+# Contient la strategie commerciale d'Amelie et des informations
+# qui n'ont pas a se retrouver dans un depot, meme prive.
+CLAUDE.md
+questions-amelie.md

@@ -1,0 +1,75 @@
+/*
+  Design tokens extraits du site "Amélie Montagné — Se choisir soi"
+  (maquette Quattro Visual : https://www.quattrovisual.com/amelie-montagne-maquette1)
+  Extraction fidèle des custom properties CSS trouvées dans :root.
+  À coller tel quel en haut de votre feuille de style principale.
+*/
+
+:root {
+  /* Verts (couleur de marque) */
+  --green-brand:   #555C4C;
+  --green-deep:    #4C5343;
+  --green-light:   #6E7663;
+  --green-darkest: #3F463A;
+
+  /* Encre / textes */
+  --ink:       #3A4034;
+  --text:      #6E6858;
+  --text-soft: #8C8574;
+
+  /* Fonds clairs */
+  --ivory:      #FBF8F0;
+  --ivory-alt:  #FDFBF5;
+  --beige:      #F7F3E9;
+  --beige-deep: #EFEADC;
+  --line:       #E6E2D2;
+
+  /* Accents */
+  --taupe:      #C6AC8F;
+  --ocre-dark:  #A08A63;
+  --ocre-light: #E3C79A;
+  --sage:       #DCE2C8;
+  --sage-chip:  #DDE3CB;
+
+  /* Placeholders (utilisés pour les zones photo) */
+  --ph-1: #E4D9C4;
+  --ph-2: #CFD6BB;
+  --ph-3: #C9C2A6;
+  --ph-4: #9EA882;
+
+  /* Texte/overlay sur fond vert */
+  --on-green:      #FBF8F0;
+  --on-green-soft: rgba(251,248,240,.78);
+  --on-green-mute: rgba(251,248,240,.62);
+  --hair-green:    rgba(251,248,240,.16);
+  --hair-light:    rgba(58,64,52,.12);
+
+  /* Effet verre / glassmorphism (cartes du hero) */
+  --glass-bg:     rgba(251,248,240,.10);
+  --glass-border: rgba(251,248,240,.18);
+
+  /* Rythme / espacements responsives */
+  --sec-x: clamp(26px, 4.6vw, 60px);
+  --sec-y: clamp(66px, 8.4vw, 120px);
+  --nav-x: clamp(16px, 3.5vw, 50px);
+  --nav-y: clamp(16px, 2.4vw, 34px);
+
+  /* Easing des transitions */
+  --ease: cubic-bezier(.4,0,.2,1);
+}
+
+/*
+  Polices (Google Fonts) réellement utilisées par le site — 3 familles :
+  - Jost, sans-serif                 → corps de texte / UI
+  - Marcellus, serif                 → titres
+  - "Cormorant Garamond", serif      → citations en italique (ex: « Je peux souffler ici. »)
+
+  (Note : "Inter" et "Roboto Mono" apparaissent aussi dans le CSS calculé de
+  l'onglet, mais via des @font-face pointant vers "chrome-extension://" —
+  ce sont des polices injectées par une extension du navigateur, pas par le
+  site lui-même. Ignorez-les.)
+
+  Le <link> Google Fonts exact (avec les bonnes graisses) est déjà dans le
+  <head> de index.html si vous avez copié le code source de la page :
+  https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400;500&family=Marcellus&display=swap
+*/

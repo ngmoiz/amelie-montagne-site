@@ -1,0 +1,17 @@
+# Deploiement Netlify — site statique, aucun build.
+# Seul le contenu de public/ est mis en ligne : la documentation de travail
+# (CLAUDE.md, questions-amelie.md) reste dans le depot et n'est jamais servie.
+
+[build]
+  publish = "public"
+
+# En-tetes de securite appliques a toutes les pages.
+# Pas de Content-Security-Policy ici : elle casserait Google Fonts et
+# l'integration Calendly a venir. A ajouter plus tard, testee.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
