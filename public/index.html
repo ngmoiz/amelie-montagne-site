@@ -212,7 +212,7 @@
               <span>Faire connaissance, comprendre ce qui vous amène. Aucun engagement.</span>
             </div>
           </div>
-          <a class="btn btn--green" href="#" aria-disabled="true">Réserver</a>
+          <a class="btn btn--green js-book" href="#" aria-disabled="true">Réserver</a>
         </div>
       </div>
     </div>
@@ -272,7 +272,7 @@
     <div class="final-orb" aria-hidden="true"></div>
     <p class="final-title">Se choisir soi, ce n'est pas se fermer aux autres. C'est apprendre à ne plus s'oublier.</p>
     <div class="final-row">
-      <a class="btn btn--green" href="#" aria-disabled="true">Réserver mon premier échange</a>
+      <a class="btn btn--green js-book" href="#" aria-disabled="true">Réserver mon premier échange</a>
       <span class="final-note">45 minutes · 50 € · sans engagement</span>
     </div>
   </section>
@@ -351,6 +351,67 @@
   (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(function () {
     if (mq.matches) closeMenu();
   });
+
+  /* --- Prise de rendez-vous Calendly ---------------------------------
+     UNE SEULE LIGNE A MODIFIER : CALENDLY_URL ci-dessous.
+
+     Tant qu'elle contient "REMPLACER", les boutons restent inertes : mieux
+     vaut un bouton qui ne fait rien qu'un bouton qui mene vers une page
+     Calendly inexistante.
+
+     Le script Calendly n'est telecharge qu'au PREMIER CLIC, jamais au
+     chargement de la page : aucun cookie tiers n'est depose tant que le
+     visiteur ne demande pas explicitement a reserver. C'est ce qui nous
+     dispense d'un bandeau cookies. Ne pas deplacer ce chargement dans le
+     <head> sans rouvrir cette question.
+     ------------------------------------------------------------------- */
+  /* >>> URL DE TEST — A REMPLACER PAR CELLE D'AMELIE AVANT LE LANCEMENT <<< */
+  var CALENDLY_URL = 'https://calendly.com/gadgets-maisons/30min';
+  var bookLinks = document.querySelectorAll('.js-book');
+
+  if (bookLinks.length && CALENDLY_URL.indexOf('REMPLACER') === -1) {
+    var calendlyLoading = null;
+
+    function loadCalendly() {
+      if (calendlyLoading) return calendlyLoading;
+      calendlyLoading = new Promise(function (resolve, reject) {
+        var css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = 'https://assets.calendly.com/assets/external/widget.css';
+        document.head.appendChild(css);
+
+        var js = document.createElement('script');
+        js.src = 'https://assets.calendly.com/assets/external/widget.js';
+        js.async = true;
+        js.onload = resolve;
+        js.onerror = reject;
+        document.head.appendChild(js);
+      });
+      return calendlyLoading;
+    }
+
+    bookLinks.forEach(function (a) {
+      /* href reel : si le JS echoue, le lien reste cliquable normalement */
+      a.setAttribute('href', CALENDLY_URL);
+      a.removeAttribute('aria-disabled');
+
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var label = a.textContent;
+        a.textContent = 'Ouverture…';
+        loadCalendly()
+          .then(function () {
+            a.textContent = label;
+            window.Calendly.initPopupWidget({ url: CALENDLY_URL });
+          })
+          .catch(function () {
+            /* Calendly injoignable : on y va en pleine page plutot que rien */
+            a.textContent = label;
+            window.location.href = CALENDLY_URL;
+          });
+      });
+    });
+  }
 
   /* --- Liens inertes : maquette sans page secondaire --- */
   document.querySelectorAll('[aria-disabled="true"]').forEach(function (el) {
