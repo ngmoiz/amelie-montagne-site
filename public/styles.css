@@ -1350,3 +1350,27 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .step,.offer,.portrait--editorial .portrait-photo{transition:none}
   .step:hover,.offer:hover,.portrait--editorial:hover .portrait-photo{transform:none}
 }
+
+/* Petits écrans : libellés complets, commande de menu contrastée et tactile. */
+@media (max-width:1023px){
+  .nav-wrap:not(.is-scrolled) .burger span{background:var(--art-ink)}
+  .burger{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+  .menu{overflow-y:auto;overscroll-behavior:contain}
+  .menu-top,.menu-cta{flex-shrink:0}
+  .menu-links{flex-shrink:0;padding:24px 0}
+  .btn-row,.first-call,.final-row{min-width:0;max-width:100%}
+  .btn-row .btn,.first-call .btn,.final-row .btn,.hero-cta .btn,.menu-cta{
+    max-width:100%;white-space:normal;overflow-wrap:break-word;line-height:1.5;
+  }
+  .btn-row .btn{min-width:0;flex-shrink:1}
+}
+@media (max-width:600px){
+  .page-brand{max-width:calc(100% - 128px)}
+  .page-brand-name{font-size:clamp(23px,6vw,30px)}
+  .btn-row{width:100%}
+  .btn-row .btn{width:100%;padding-left:18px;padding-right:18px}
+  .first-call .btn{width:100%}
+}
+@media (max-height:600px) and (max-width:1023px){
+  .menu-links{gap:14px;font-size:22px}
+}
