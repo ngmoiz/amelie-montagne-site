@@ -192,4 +192,18 @@
         });
     });
   }
+  /* Dévoilement très léger au fil de la lecture. Aucun contenu n'est masqué en
+     attendant : la page reste lisible sans JS et avec mouvement réduit. */
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var artObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('art-reveal');
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -45px 0px', threshold: .08 });
+    document.querySelectorAll('.page-head-in,.story .prose,.prose-sec .prose,.meet-text,.steps,.offers,.faq--page .faq-item,.contact-in').forEach(function (element) {
+      artObserver.observe(element);
+    });
+  }
 })();
