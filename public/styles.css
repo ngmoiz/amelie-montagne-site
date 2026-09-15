@@ -996,15 +996,15 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .nav-wrap.is-scrolled .nav{width:max-content}
   .nav-wrap.is-scrolled .nav-bar{padding:9px 16px;min-width:62px}
   .nav-wrap.is-scrolled .burger span{background:var(--art-ink)}
-  .hero-in{padding-top:clamp(175px,24vw,195px)}
+  .hero-in{padding-top:clamp(215px,27vw,235px)}
   .hero-text{width:100%;transform:none}
   .hero-title{font-size:clamp(42px,8vw,68px)}
-  .hero .eyebrow{position:static;width:auto;text-align:center}
+  .hero .eyebrow{position:absolute;top:155px;left:8%;right:8%;width:84%;margin:0;text-align:center;order:initial}
 }
 @media (max-width:520px){
   .hero-brand-name{font-size:clamp(30px,8vw,39px)}
   .hero-brand-sub{font-size:10px}
-  .hero-in{padding-top:170px}
+  .hero-in{padding-top:215px}
   .hero-title{font-size:clamp(36px,9.5vw,49px)}
   .hero-cta .btn{font-size:17px;padding:14px 20px}
 }
