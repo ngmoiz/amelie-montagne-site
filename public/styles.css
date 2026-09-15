@@ -862,7 +862,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .hero-cta .btn{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:0;text-transform:none;padding:15px 36px;background:#555c4c;color:#fffdf8;border-radius:100px}
 .hero-cta .btn span{margin-left:18px}
 .hero-script{position:absolute;right:5%;top:73%;bottom:auto;font-family:'Dancing Script',cursive;font-style:normal;font-weight:400;font-size:clamp(23px,2.5vw,37px);line-height:1.13;transform:rotate(-9deg);text-align:center;color:#30372f;text-shadow:0 1px 12px rgba(255,251,243,.98)}
-.hero-script img{display:block;width:42px;height:auto;margin:8px auto 0;transform:rotate(9deg)}
+.hero-heart{display:block;font-family:'Dancing Script',cursive;font-size:46px;line-height:.9;margin:5px auto 0;transform:rotate(9deg)}
 .hero-wave{position:absolute;bottom:-1px;left:0;width:100%;height:clamp(65px,9vw,130px);pointer-events:none}
 .hero-wave svg{width:100%;height:100%}
 .nav-wrap:not(.is-scrolled) .nav-bar{background:transparent;border-color:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
@@ -897,7 +897,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .hero-cta{order:3;display:flex;align-items:center;margin-top:25px}
   .hero-cta .btn{width:auto;max-width:100%;padding:15px 24px;font-size:20px}
   .hero-script{position:relative;top:auto;bottom:auto;right:auto;margin:42px 4% 0 auto;width:max-content;max-width:70%;font-size:25px;color:#fffdf8;text-shadow:0 1px 4px #30372f,0 2px 16px #30372f}
-  .hero-script img{width:36px;filter:brightness(1.7)}
+  .hero-heart{font-size:38px}
   .hero-wave{height:72px}
 }
 @media (max-width:520px){
