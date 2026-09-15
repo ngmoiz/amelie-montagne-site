@@ -853,7 +853,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .hero .eyebrow .rule{display:none}
 .hero-title{font-family:'Marcellus',serif;font-size:clamp(46px,4.65vw,67px);line-height:1.11;font-weight:400;color:#30372f;margin-top:22px;letter-spacing:-.035em;text-shadow:0 1px 14px rgba(255,251,243,.7)}
 .hero-title-line{display:block;white-space:nowrap}
-.hero-title em{display:inline-block;position:relative;isolation:isolate;color:var(--art-ink);background:none;-webkit-background-clip:initial;background-clip:initial;font-family:'Caveat',cursive;font-size:1.2em;font-style:normal;font-weight:400;letter-spacing:-.03em;line-height:.72;white-space:nowrap;transform:rotate(-3deg);padding:0 .07em 0 .01em}
+.hero-title em{display:inline-block;position:relative;isolation:isolate;color:var(--art-ink);background:none;-webkit-background-clip:initial;background-clip:initial;font-family:'Dancing Script',cursive;font-size:1.12em;font-style:normal;font-weight:400;letter-spacing:-.03em;line-height:.82;white-space:nowrap;transform:rotate(-3deg);padding:0 .07em 0 .01em}
 .hero-title em::before{content:"";display:block;position:absolute;z-index:-1;left:-14%;right:-13%;top:2%;bottom:-20%;background:url('illustrations/brush-marker.webp') center/100% 100% no-repeat;transform:rotate(1deg);pointer-events:none}
 .hero-lead{color:#30372f;max-width:550px;font-family:'Marcellus',serif;font-size:clamp(17px,1.42vw,21px);line-height:1.52;margin-top:36px;font-weight:400;text-shadow:0 1px 12px rgba(255,251,243,.9)}
 .hero-lead::before{content:"";display:block;width:58px;height:1px;background:var(--ink);margin:0 auto 24px}
