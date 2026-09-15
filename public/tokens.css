@@ -25,9 +25,11 @@
   --hero-copy-size: clamp(16px, 1.28vw, 19px); /* Paragraphe sous le titre */
   --hero-button-size: 19px;                    /* Texte du bouton vert */
   /* Position du bloc vert : augmentez le décalage pour le pousser à droite. */
-  --hero-text-right-shift: 28px;
+  --hero-text-right-shift: 50px;
   /* Distance depuis le haut : augmentez-la pour éloigner le titre du logo. */
   --hero-text-start: 214px;
+  /* Espace entre le lotus et « Coaching individuel · … » : baissez-le pour rapprocher le texte. */
+  --hero-tagline-gap: 14px;
   /* Verts (couleur de marque) */
   --green-brand:   #555C4C;
   --green-deep:    #4C5343;

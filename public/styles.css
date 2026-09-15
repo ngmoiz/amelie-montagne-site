@@ -979,7 +979,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .hero-brand-sub{font-family:'Jost',sans-serif;font-size:12px;font-weight:400;letter-spacing:.35em;margin-top:6px}
 /* Affiche le PNG directement : le masque CSS empêchait son rendu sur certains écrans. */
 .hero-brand img.hero-brand-lotus{display:block;width:39px;height:39px;object-fit:contain;margin-top:3px;opacity:var(--hero-lotus-opacity)}
-.hero .eyebrow{top:165px;left:4%;right:auto;width:48%;text-align:center;justify-content:center}
+/* La signature suit le bas du lotus : haut du bloc + nom (×1.05 d'interligne) + lotus (3px + 39px) + écart.
+   Si la taille du lotus change, ajuster les 42px ici (et 41px dans les blocs mobiles). */
+.hero .eyebrow{top:calc(clamp(25px,3vw,43px) + var(--hero-logo-size) * 1.05 + 42px + var(--hero-tagline-gap));left:4%;right:auto;width:48%;text-align:center;justify-content:center}
 .hero .eyebrow{font-size:11px}
 .hero-in{padding-top:var(--hero-text-start)}
 .hero-text{width:63%;transform:translateX(var(--hero-text-right-shift))}
@@ -1000,11 +1002,12 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .hero-in{padding-top:clamp(215px,27vw,235px)}
   .hero-text{width:100%;transform:none}
   .hero-title{font-size:clamp(42px,8vw,68px)}
-  .hero .eyebrow{position:absolute;top:155px;left:8%;right:8%;width:84%;margin:0;text-align:center;order:initial}
+  .hero .eyebrow{position:absolute;top:calc(39px + clamp(36px,7vw,55px) * 1.05 + 41px + var(--hero-tagline-gap));left:8%;right:8%;width:84%;margin:0;text-align:center;order:initial}
 }
 @media (max-width:520px){
   .hero-brand-name{font-size:clamp(30px,8vw,39px)}
   .hero-brand-sub{font-size:10px}
+  .hero .eyebrow{top:calc(39px + clamp(30px,8vw,39px) * 1.05 + 41px + var(--hero-tagline-gap))}
   .hero-in{padding-top:215px}
   .hero-title{font-size:clamp(36px,9.5vw,49px)}
   .hero-cta .btn{font-size:17px;padding:14px 20px}
