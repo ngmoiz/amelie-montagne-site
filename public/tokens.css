@@ -17,6 +17,15 @@
   /* Photo principale : 1 = rendu d'origine ; moins de 1 = effet atténué */
   --hero-brightness: 1;
   --hero-saturation: 1;
+  /* Premier écran, sur ordinateur : baissez ces tailles pour alléger les blocs rouge et vert. */
+  --hero-logo-size: clamp(36px, 3.35vw, 52px);  /* Nom Amélie Montagné */
+  --hero-title-size: clamp(44px, 4.25vw, 61px); /* Grand titre à droite */
+  --hero-copy-size: clamp(16px, 1.28vw, 19px); /* Paragraphe sous le titre */
+  --hero-button-size: 19px;                    /* Texte du bouton vert */
+  /* Position du bloc vert : augmentez le décalage pour le pousser à droite. */
+  --hero-text-right-shift: 28px;
+  /* Distance depuis le haut : augmentez-la pour éloigner le titre du logo. */
+  --hero-text-start: 214px;
   /* Verts (couleur de marque) */
   --green-brand:   #555C4C;
   --green-deep:    #4C5343;
