@@ -848,19 +848,20 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:-2}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,transparent 34%,rgba(255,249,240,.36) 51%,rgba(255,249,240,.59) 73%,rgba(255,249,240,.33) 100%)}
 .hero-in{display:block;min-height:inherit;padding:155px 5.5% 120px;position:relative}
-.hero-text{display:flex;align-items:center;text-align:center;gap:0;width:52%;margin-left:auto}
+.hero-text{display:flex;align-items:center;text-align:center;gap:0;width:67%;margin-left:auto}
 .hero .eyebrow{position:absolute;top:136px;left:5%;right:5%;color:#30372f;font-size:12px;font-weight:500;letter-spacing:.18em;white-space:normal;text-align:left;text-shadow:0 1px 12px rgba(255,250,241,.95)}
 .hero .eyebrow .rule{display:none}
-.hero-title{font-family:'Marcellus',serif;font-size:clamp(49px,5.7vw,82px);line-height:1.07;font-weight:400;color:#30372f;margin-top:22px;letter-spacing:-.035em;text-shadow:0 1px 14px rgba(255,251,243,.7)}
-.hero-title em{position:relative;color:var(--ink);background:none;-webkit-background-clip:initial;background-clip:initial;font-weight:400;z-index:0}
-.hero-title em::before{content:"";position:absolute;z-index:-1;left:-7%;right:-9%;top:38%;height:49%;background:#e8b9a7;opacity:.75;transform:rotate(-3deg);border-radius:36% 21% 37% 18%;}
+.hero-title{font-family:'Marcellus',serif;font-size:clamp(46px,4.65vw,67px);line-height:1.11;font-weight:400;color:#30372f;margin-top:22px;letter-spacing:-.035em;text-shadow:0 1px 14px rgba(255,251,243,.7)}
+.hero-title-line{display:block;white-space:nowrap}
+.hero-title em{position:relative;color:var(--ink);background:url('illustrations/brush-pink.svg') center 69%/116% 80% no-repeat;-webkit-background-clip:initial;background-clip:initial;font-weight:400;font-style:italic;padding:0 .08em}
+.hero-title em::before{display:none}
 .hero-lead{color:#30372f;max-width:550px;font-family:'Marcellus',serif;font-size:clamp(17px,1.42vw,21px);line-height:1.52;margin-top:36px;font-weight:400;text-shadow:0 1px 12px rgba(255,251,243,.9)}
 .hero-lead::before{content:"";display:block;width:58px;height:1px;background:var(--ink);margin:0 auto 24px}
 .hero-cta{margin-top:30px;justify-content:center}
 .hero-cta .btn{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:0;text-transform:none;padding:15px 36px;background:#555c4c;color:#fffdf8;border-radius:100px}
 .hero-cta .btn span{margin-left:18px}
-.hero-script{position:absolute;right:3%;bottom:29%;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(23px,2.5vw,37px);line-height:.9;transform:rotate(-9deg);text-align:center;color:#30372f;text-shadow:0 1px 12px rgba(255,251,243,.98)}
-.hero-script span{display:block;font-size:44px;margin-top:8px}
+.hero-script{position:absolute;right:5%;top:73%;bottom:auto;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(23px,2.5vw,37px);line-height:.95;transform:rotate(-9deg);text-align:center;color:#30372f;text-shadow:0 1px 12px rgba(255,251,243,.98)}
+.hero-script img{display:block;width:42px;height:auto;margin:8px auto 0;transform:rotate(9deg)}
 .hero-wave{position:absolute;bottom:-1px;left:0;width:100%;height:clamp(65px,9vw,130px);pointer-events:none}
 .hero-wave svg{width:100%;height:100%}
 .nav-wrap:not(.is-scrolled) .nav-bar{background:transparent;border-color:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
@@ -877,20 +878,21 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .hero-in{display:block;min-height:840px;padding:125px 22px 100px}
   .hero-text{display:flex;width:100%;margin:0;gap:0}
   .hero .eyebrow{position:static;order:0;font-size:10px;letter-spacing:.1em;text-align:center;margin:0 0 28px;line-height:1.6}
-  .hero-title{order:1;font-size:clamp(48px,10vw,72px);margin:0;line-height:.94}
+  .hero-title{order:1;font-size:clamp(42px,8vw,68px);margin:0;line-height:1.07}
+  .hero-title-line{white-space:normal}
   .hero-lead{order:2;font-size:18px;line-height:1.48;margin-top:28px}
   .hero-lead::before{margin-bottom:18px}
   .hero-cta{order:3;display:flex;align-items:center;margin-top:25px}
   .hero-cta .btn{width:auto;max-width:100%;padding:15px 24px;font-size:20px}
-  .hero-script{bottom:105px;right:6%;font-size:25px;color:#fffdf8;text-shadow:0 1px 4px #30372f,0 2px 16px #30372f}
-  .hero-script span{font-size:31px}
+  .hero-script{position:relative;top:auto;bottom:auto;right:auto;margin:42px 4% 0 auto;width:max-content;max-width:70%;font-size:25px;color:#fffdf8;text-shadow:0 1px 4px #30372f,0 2px 16px #30372f}
+  .hero-script img{width:36px;filter:brightness(1.7)}
   .hero-wave{height:72px}
 }
 @media (max-width:520px){
   .hero{min-height:780px}
   .hero-in{min-height:780px;padding-top:110px}
   .hero-photo{object-position:29% center}
-  .hero-title{font-size:clamp(42px,11vw,58px)}
+  .hero-title{font-size:clamp(36px,9.5vw,49px)}
   .hero-lead{font-size:17px}
 }
 
@@ -911,6 +913,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .recognition{position:relative;background:var(--art-beige);padding:clamp(74px,8vw,120px) var(--sec-x) clamp(150px,16vw,220px);text-align:center;overflow:hidden}
 .recognition::after{content:"";position:absolute;inset:auto 0 -1px;height:clamp(58px,7vw,95px);background:url('illustrations/wave-sage.svg') center bottom/100% 100% no-repeat;pointer-events:none}
 .recognition-flower{position:absolute;width:clamp(75px,9vw,125px);height:auto;left:7%;top:14%;transform:rotate(-12deg);opacity:.9}
+.recognition-petals{position:absolute;width:clamp(90px,12vw,175px);height:auto;right:4%;bottom:13%;transform:rotate(18deg);opacity:.8;pointer-events:none}
 .recognition .eyebrow{justify-content:center;color:var(--art-sage);font-weight:500;font-size:11px;letter-spacing:.24em}
 .recognition h2{font-family:'Marcellus',serif;font-size:clamp(30px,3.3vw,48px);line-height:1.3;color:var(--art-ink);font-weight:400;max-width:850px;margin:22px auto 38px}
 .recognition h2 em{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.15em;color:var(--art-ink);background:linear-gradient(transparent 65%,rgba(217,166,160,.5) 65% 88%,transparent 88%)}
@@ -932,6 +935,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .p-badge{background:var(--art-sage);letter-spacing:.08em}
 .p-amount{font-weight:400;color:var(--art-ink)}
 .pricing-flower{position:absolute;right:2%;top:7%;width:70px;height:auto;transform:rotate(13deg);opacity:.75}
+.pricing-petals{position:absolute;left:-50px;bottom:5%;width:150px;height:auto;opacity:.48;transform:rotate(-18deg);pointer-events:none}
 .contact{background:var(--art-sage)}
 .contact-title{color:var(--art-cream)}
 .contact-title em{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--art-pink-light);background:linear-gradient(transparent 68%,rgba(217,166,160,.38) 68% 90%,transparent 90%)}
@@ -941,7 +945,8 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .faq-title{color:var(--art-ink)}
 .faq-answer p{color:#485247;font-weight:400}
 .final{background:var(--art-sage);padding-bottom:clamp(90px,10vw,150px)}
-.final-orb{width:45px;height:45px;box-shadow:none;background:var(--art-pink-light);opacity:.8}
+.final-orb{display:none}
+.final-lotus{position:relative;width:86px;height:auto;filter:brightness(1.6);opacity:.95}
 .final-title{font-family:'Marcellus',serif;font-weight:400;font-size:clamp(30px,3.5vw,49px);line-height:1.35}
 .final-note{color:#fffdf8;font-weight:400}
 .final-branch{position:absolute;right:4%;bottom:0;width:clamp(100px,15vw,185px);height:auto;filter:brightness(1.4);opacity:.65;transform:rotate(-12deg)}
@@ -952,10 +957,13 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .about-visual .about-branch{right:-20px;bottom:-23px;width:90px}
   .recognition{padding:72px var(--sec-x) 125px}
   .recognition-flower{left:auto;right:5%;top:8%;width:55px;opacity:.6}
+  .recognition-petals{width:75px;right:-18px;bottom:3%;opacity:.55}
   .recognition-list{grid-template-columns:1fr;gap:12px}
   .recognition-list p{padding:20px 22px;font-size:16px}
   .recognition-list p::before{display:inline-block;margin:0 12px 0 0;font-size:20px}
   .pricing-flower{width:48px;top:20px}
+  .pricing-petals{display:none}
   .contact-form{box-shadow:8px 12px 0 rgba(48,55,47,.14)}
   .final-branch{width:90px;opacity:.3}
+  .final-lotus{width:66px}
 }
