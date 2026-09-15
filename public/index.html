@@ -19,18 +19,19 @@
 
 <div class="page">
 
-  <!-- ========== NAV — sticky (height:0, aucun ancetre overflow:hidden) ========== -->
+  <!-- ========== NAV — identique sur toutes les pages (sticky, height:0) ========== -->
   <div class="nav-wrap" id="nav">
     <header class="nav">
       <div class="nav-bar">
         <nav class="nav-links" aria-label="Navigation principale">
-          <a href="#accueil">Accueil</a>
-          <a href="#a-propos">À propos</a>
-          <a href="#approche">Mon accompagnement</a>
-          <a href="#tarifs">Tarifs</a>
-          <a href="#contact">Contact</a>
+          <a href="index.html" aria-current="page">Accueil</a>
+          <a href="a-propos.html">À propos</a>
+          <a href="accompagnements.html">Mon accompagnement</a>
+          <a href="accompagnements.html#tarifs">Tarifs</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
         </nav>
-        <a class="nav-cta" href="#tarifs">Rendez-vous</a>
+        <a class="nav-cta" href="contact.html">Prendre rendez-vous</a>
         <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
           <span></span><span></span>
         </button>
@@ -49,7 +50,7 @@
         <h1 class="hero-title"><span class="hero-title-line">Et si vous commenciez</span><span class="hero-title-line">à vous choisir, <em>vous&nbsp;?</em></span></h1>
         <p class="hero-lead">Un espace pour ralentir, vous écouter,<br>clarifier ce qui compte vraiment pour vous<br>et avancer vers une vie qui vous ressemble davantage.</p>
         <div class="hero-cta">
-          <a class="btn btn--green" href="#approche">Découvrir mon accompagnement <span aria-hidden="true">→</span></a>
+          <a class="btn btn--green" href="accompagnements.html">Découvrir mon accompagnement <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
@@ -62,7 +63,61 @@
     <p class="only-mobile">valeurs · besoins · confiance · alignement</p>
   </div>
 
-  <!-- ========== 3. UN ESPACE POUR VOUS ========== -->
+  <!-- ========== 3. INTRODUCTION (brief : suite du hero) ========== -->
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="intro-in">
+      <h2 class="intro-title" id="intro-title">Vous avancez, vous gérez, vous faites ce qu'il faut.</h2>
+      <ul class="lines">
+        <li>Pour votre travail.</li>
+        <li>Pour vos proches.</li>
+        <li>Pour votre famille.</li>
+        <li>Pour répondre aux attentes.</li>
+      </ul>
+      <p>Et parfois, au milieu de tout cela, une question reste en suspens&nbsp;:</p>
+      <p class="pull">Et moi, qu'est-ce que je veux vraiment&nbsp;?</p>
+      <p>Vous ressentez peut-être le besoin de ralentir, de prendre du recul, de comprendre ce qui se passe en vous ou simplement de déposer ce que vous portez depuis trop longtemps.</p>
+      <p>Vous avez envie de retrouver davantage de confiance, de clarté et d'alignement.</p>
+      <p class="intro-strong">Le coaching peut être cet espace.</p>
+      <p>Un espace pour vous écouter sans jugement, mettre des mots sur vos besoins et vos valeurs, comprendre ce qui vous freine et avancer vers une vie qui vous ressemble davantage.</p>
+      <p class="intro-end">Parce que votre vie vous appartient.</p>
+      <div class="btn-row">
+        <a class="btn btn--green" href="accompagnements.html">Découvrir mon accompagnement</a>
+        <a class="btn btn--line js-book" href="#" aria-disabled="true">Réserver mon premier échange</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. SE CHOISIR SOI ========== -->
+  <section class="statement" aria-labelledby="statement-title">
+    <img class="statement-lotus" src="illustrations/lotus-personnel.png" alt="" width="512" height="512" loading="lazy">
+    <h2 class="statement-label" id="statement-title">Se choisir soi</h2>
+    <p class="statement-text">Se choisir soi, ce n'est pas penser uniquement à soi.</p>
+    <p class="statement-sub">C'est apprendre à écouter ses besoins, respecter ses valeurs et faire des choix qui nous ressemblent.</p>
+  </section>
+
+  <!-- ========== 5. VOUS VOUS RECONNAISSEZ ? ========== -->
+  <section class="recognition" aria-labelledby="recognition-title">
+    <img class="recognition-flower" src="illustrations/flower.svg" alt="" width="120" height="120" loading="lazy">
+    <img class="recognition-petals" src="illustrations/petals.svg" alt="" width="200" height="155" loading="lazy">
+    <p class="eyebrow eyebrow--light">Vous vous reconnaissez&nbsp;?</p>
+    <h2 id="recognition-title">Vous avez peut-être <em>l'impression</em> de&nbsp;:</h2>
+    <ul class="recognition-list">
+      <li>Trop réfléchir avant de prendre une décision</li>
+      <li>Douter de vous ou de vos choix</li>
+      <li>Faire passer les besoins des autres avant les vôtres</li>
+      <li>Avoir du mal à dire non</li>
+      <li>Ressentir beaucoup de pression ou de stress</li>
+      <li>Ne plus vraiment savoir ce dont vous avez besoin</li>
+      <li>Traverser une période de changement</li>
+      <li>Vous sentir parfois éloigné(e) de vous-même</li>
+      <li>Avoir envie de changement sans savoir par où commencer</li>
+      <li>Chercher davantage de sens ou d'alignement dans votre vie personnelle ou professionnelle</li>
+    </ul>
+    <p class="recognition-close">Et si vous vous accordiez enfin <em>la même écoute</em> que vous accordez aux autres&nbsp;?</p>
+    <a class="link-under" href="accompagnements.html#approche">Découvrir mon approche</a>
+  </section>
+
+  <!-- ========== 6. UN ESPACE POUR VOUS ========== -->
   <section class="about" id="a-propos">
     <figure class="about-visual">
       <img src="images/moment-pour-soi.jpg" alt="Une femme marche tranquillement dans un jardin à la lumière du soir" width="1024" height="1365" loading="lazy">
@@ -71,25 +126,14 @@
     <div class="about-text">
       <p class="eyebrow eyebrow--light"><span class="rule"></span>Un espace pour vous</p>
       <h2 class="about-title">Ici, vous pouvez simplement <em>être vous.</em></h2>
-      <p class="about-p1">Ralentir, prendre du recul, mettre des mots sur ce que vous ressentez — et retrouver progressivement votre propre boussole.</p>
-      <p class="about-p2">Je ne suis pas là pour vous dire quoi faire, ni pour décider à votre place.</p>
-      <a class="link-under" href="#approche">Découvrir ma méthode</a>
+      <p class="about-p1">Le coaching est avant tout un espace pour vous, un espace pour ralentir, prendre du recul. Afin de déposer ce que vous avez besoin de déposer, pour mettre des mots sur ce que vous ressentez. Pour comprendre ce qui se joue en vous, mais tout aussi bien retrouver progressivement votre propre boussole.</p>
+      <p class="about-p2">Je ne suis pas là pour vous dire quoi faire. Je ne vais pas décider à votre place. Je vous accompagne pour que vous puissiez faire émerger vos propres réponses.</p>
+      <p class="about-p2">À travers l'écoute et le questionnement, nous pouvons explorer ensemble vos besoins, vos valeurs, vos ressources, vos envies et ce que vous souhaitez réellement faire évoluer.</p>
+      <a class="link-under" href="accompagnements.html#approche">Découvrir ma méthode</a>
     </div>
   </section>
 
-  <section class="recognition" aria-labelledby="recognition-title">
-    <img class="recognition-flower" src="illustrations/flower.svg" alt="" width="120" height="120" loading="lazy">
-    <img class="recognition-petals" src="illustrations/petals.svg" alt="" width="200" height="155" loading="lazy">
-    <p class="eyebrow eyebrow--light">Se choisir soi</p>
-    <h2 id="recognition-title">Et si vous vous accordiez<br><em>la même écoute</em> que celle que vous offrez aux autres&nbsp;?</h2>
-    <div class="recognition-list">
-      <p>Vous doutez de vos choix et aimeriez y voir plus clair.</p>
-      <p>Vous faites souvent passer les autres avant vous.</p>
-      <p>Vous ressentez le besoin de ralentir et de retrouver votre boussole.</p>
-    </div>
-  </section>
-
-  <!-- ========== 4. LES CINQ AXES ========== -->
+  <!-- ========== 7. CE QUE NOUS POUVONS TRAVAILLER ENSEMBLE ========== -->
   <section class="axes-sec" id="approche">
     <span class="halo halo--a"></span>
     <span class="halo halo--b"></span>
@@ -97,7 +141,6 @@
     <div class="axes-head">
       <p class="eyebrow eyebrow--on-green"><span class="rule"></span>Ensemble<span class="rule"></span></p>
       <h2 class="axes-title">Ce que nous pouvons travailler ensemble</h2>
-      <p class="axes-sub">Cinq axes, un même fil&nbsp;: revenir à soi. Nous choisissons ensemble celui qui compte pour vous aujourd'hui.</p>
     </div>
 
     <div class="axes-wrap">
@@ -110,7 +153,7 @@
           <span class="axis-body">
             <span class="axis-num">01</span>
             <span class="axis-title">Reconnexion à soi</span>
-            <span class="axis-desc">Vous écouter à nouveau, avec attention.</span>
+            <span class="axis-desc">Prendre le temps de vous écouter, de comprendre ce que vous ressentez et de retrouver une relation plus attentive avec vous-même.</span>
           </span>
         </li>
         <li class="axis">
@@ -120,7 +163,7 @@
           <span class="axis-body">
             <span class="axis-num">02</span>
             <span class="axis-title">Alignement</span>
-            <span class="axis-desc">Faire coïncider vos choix et vos valeurs.</span>
+            <span class="axis-desc">Clarifier ce qui compte réellement pour vous et faire davantage coïncider vos choix avec vos valeurs et vos besoins.</span>
           </span>
         </li>
         <li class="axis">
@@ -130,7 +173,7 @@
           <span class="axis-body">
             <span class="axis-num">03</span>
             <span class="axis-title">Confiance en soi</span>
-            <span class="axis-desc">Reconnaître vos ressources et vos appuis.</span>
+            <span class="axis-desc">Mieux reconnaître vos ressources, vos capacités et ce qui peut vous permettre d'avancer avec davantage de confiance.</span>
           </span>
         </li>
         <li class="axis">
@@ -140,7 +183,7 @@
           <span class="axis-body">
             <span class="axis-num">04</span>
             <span class="axis-title">Affirmation de soi</span>
-            <span class="axis-desc">Dire vos besoins, poser vos limites.</span>
+            <span class="axis-desc">Apprendre à exprimer vos besoins, vos limites et vos choix sans vous oublier pour autant.</span>
           </span>
         </li>
         <li class="axis">
@@ -150,176 +193,57 @@
           <span class="axis-body">
             <span class="axis-num">05</span>
             <span class="axis-title">Choix &amp; changements</span>
-            <span class="axis-desc">Prendre du recul, retrouver de la clarté.</span>
+            <span class="axis-desc">Prendre du recul sur une situation personnelle ou professionnelle et retrouver de la clarté pour avancer.</span>
           </span>
         </li>
       </ul>
     </div>
+  </section>
 
-    <div class="axes-foot">
-      <p class="axes-quote">« Et si vous vous accordiez enfin la même écoute que celle que vous accordez aux autres ? »</p>
-      <a class="btn btn--outline" href="#tarifs">Découvrir mon approche</a>
+  <!-- ========== 8. BONJOUR, MOI C'EST AMÉLIE ========== -->
+  <section class="meet" aria-labelledby="meet-title">
+    <div class="meet-text">
+      <p class="eyebrow eyebrow--light">Bonjour, moi c'est Amélie</p>
+      <h2 class="meet-title" id="meet-title">Avant d'être coach, j'ai moi aussi dû apprendre à <em>m'écouter.</em></h2>
+      <p>Pendant longtemps, j'ai fait certains choix en pensant aux attentes des autres. Jusqu'au jour où j'ai compris que personne ne pouvait vivre ma vie à ma place.</p>
+      <p>C'est cette prise de conscience qui m'a amenée vers le coaching.</p>
+      <p>Aujourd'hui, j'accompagne à mon tour celles et ceux qui ressentent le besoin de ralentir, de prendre du recul et de se reconnecter à eux-mêmes.</p>
+      <a class="link-under" href="a-propos.html">Découvrir mon histoire</a>
+    </div>
+    <!-- À REMPLACER par le portrait d'Amélie : sur un site de coaching, c'est l'élément de confiance n°1. -->
+    <figure class="portrait" aria-label="Emplacement réservé au portrait d'Amélie">
+      <img class="portrait-lotus" src="illustrations/lotus-personnel.png" alt="" width="512" height="512" loading="lazy">
+      <figcaption>Portrait d'Amélie</figcaption>
+    </figure>
+  </section>
+
+  <!-- ========== 9. VOTRE VIE VOUS APPARTIENT ========== -->
+  <section class="life" aria-labelledby="life-title">
+    <div class="life-in">
+      <h2 class="life-title" id="life-title">Votre vie <em>vous appartient.</em></h2>
+      <p>Les autres peuvent vous conseiller, vous aimer, vous soutenir &amp; partager leur expérience.</p>
+      <p>Mais ils ne vivent pas votre vie, ne ressentent pas vos émotions &amp; ne portent pas vos doutes.</p>
+      <p class="life-strong">C'est vous qui vivez votre histoire.</p>
+      <p>Et peut-être que le premier pas consiste simplement à vous demander&nbsp;:</p>
+      <ul class="questions">
+        <li>Est-ce que je fais cela pour moi ou pour les autres&nbsp;?</li>
+        <li>Est-ce que cette vie me ressemble&nbsp;?</li>
+        <li>Est-ce que je m'écoute réellement&nbsp;?</li>
+      </ul>
     </div>
   </section>
 
-  <!-- ========== 5. TARIFS ========== -->
-  <section class="pricing" id="tarifs">
-    <img class="pricing-flower" src="illustrations/flower.svg" alt="" width="120" height="120" loading="lazy">
-    <img class="pricing-petals" src="illustrations/petals.svg" alt="" width="200" height="155" loading="lazy">
-    <span class="halo halo--a"></span>
-
-    <div class="pricing-in">
-      <div class="pricing-intro">
-        <p class="eyebrow eyebrow--ocre"><span class="rule"></span>Tarifs</p>
-        <h2 class="pricing-title">Choisir le rythme qui vous correspond.</h2>
-        <p class="pricing-lead">Coaching individuel en one-to-one, 100 % en visioconférence au lancement. Une heure par séance, un rythme défini ensemble.</p>
-        <div class="certif">
-          <img src="logo-lockup-vert-v2.png" alt="Amélie Montagné" width="600" height="378">
-          <span>Certifiée Level 2<br>Coaching Ways</span>
-        </div>
-      </div>
-
-      <div class="p-list">
-        <div class="p-row">
-          <span class="p-num">01</span>
-          <span class="p-title">Séance à l'unité</span>
-          <span class="p-desc">Un espace dédié à ce que vous souhaitez travailler maintenant.</span>
-          <span class="p-price"><span class="p-amount">55 €</span><span class="p-unit">1 heure</span></span>
-        </div>
-        <div class="p-row p-row--featured">
-          <span class="p-num">02</span>
-          <span class="p-title">Parcours 5 séances</span>
-          <span class="p-badge">Le plus choisi</span>
-          <span class="p-desc">Le temps d'explorer, de clarifier vos objectifs et d'installer les changements.</span>
-          <span class="p-price"><span class="p-amount">250 €</span><span class="p-unit">5 × 1 heure</span></span>
-        </div>
-        <div class="p-row">
-          <span class="p-num">03</span>
-          <span class="p-title">Parcours 10 séances</span>
-          <span class="p-desc">Pour inscrire votre démarche dans la durée, sans jamais aller vite.</span>
-          <span class="p-price"><span class="p-amount">500 €</span><span class="p-unit">10 × 1 heure</span></span>
-        </div>
-
-        <div class="p-foot">
-          <div class="p-foot-left">
-            <img class="p-foot-logo" src="logo-lockup-vert-v2.png" alt="Amélie Montagné" width="600" height="378">
-            <svg class="p-foot-clock" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A08A63" stroke-width="1" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5V12l3 2"></path></svg>
-            <div class="p-foot-txt">
-              <b>Premier échange · 45 minutes · 50 €</b>
-              <span>Faire connaissance, comprendre ce qui vous amène. Aucun engagement.</span>
-            </div>
-          </div>
-          <a class="btn btn--green js-book" href="#" aria-disabled="true">Réserver</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 6. CONTACT ========== -->
-  <section class="contact" id="contact">
-    <span class="halo halo--a"></span>
-
-    <div class="contact-in">
-      <div class="contact-intro">
-        <p class="eyebrow eyebrow--on-green"><span class="rule"></span>Avant de vous décider</p>
-        <h2 class="contact-title">Une question&nbsp;? <em>Écrivons-nous.</em></h2>
-        <p class="contact-lead">Dites-moi ce que vous aimeriez savoir&nbsp;: le déroulé d'une séance, le rythme qui vous conviendrait, ou simplement si cet accompagnement peut vous correspondre. Aucune question n'est de trop.</p>
-      </div>
-
-      <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="cf-hp"><label>Laissez ce champ vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-        <div class="cf-head">
-          <span>Écrire à Amélie</span>
-          <span>Sans engagement</span>
-        </div>
-
-        <div class="cf-grid">
-          <div class="cf-field">
-            <label for="cf-prenom">Prénom</label>
-            <input id="cf-prenom" name="prenom" type="text" autocomplete="given-name" placeholder="Votre prénom" required>
-          </div>
-          <div class="cf-field">
-            <label for="cf-nom">Nom</label>
-            <input id="cf-nom" name="nom" type="text" autocomplete="family-name" placeholder="Votre nom" required>
-          </div>
-        </div>
-
-        <div class="cf-field">
-          <label for="cf-email">Adresse e-mail</label>
-          <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="vous@email.com" required>
-        </div>
-
-        <div class="cf-field">
-          <label for="cf-message">Votre message</label>
-          <textarea id="cf-message" name="message" rows="3" placeholder="Ce que vous aimeriez savoir…" required></textarea>
-        </div>
-
-        <button class="btn btn--green cf-submit" type="submit">Envoyer ma demande</button>
-        <p class="cf-note">Vos informations ne servent qu'à vous répondre. Elles ne sont ni revendues, ni utilisées pour autre chose.</p>
-        <p class="cf-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- ========== 7. FAQ ========== -->
-  <section class="faq" id="faq">
-    <div class="faq-in">
-      <div class="faq-head">
-        <p class="eyebrow eyebrow--ocre"><span class="rule"></span>Questions fréquentes</p>
-        <h2 class="faq-title">Ce que l'on me demande souvent.</h2>
-      </div>
-
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Combien de séances faut-il&nbsp;?</summary>
-          <div class="faq-answer">
-            <p>Il n'y a pas de nombre juste. Certaines personnes y voient plus clair en quelques séances, d'autres ont besoin de plusieurs mois. Le parcours de cinq séances est souvent un bon point de départ&nbsp;: assez long pour installer quelque chose, assez court pour ne pas vous engager dans le vide. Nous définissons le rythme ensemble, et vous restez libre de l'ajuster.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>En quoi est-ce différent d'une psychothérapie&nbsp;?</summary>
-          <div class="faq-answer">
-            <p>Le coaching part de là où vous êtes aujourd'hui pour avancer vers ce que vous souhaitez construire. Il ne soigne pas&nbsp;: <strong>ce n'est ni un acte médical, ni une psychothérapie, et il ne remplace ni l'un ni l'autre.</strong></p>
-            <p>Si ce que vous traversez relève d'un accompagnement thérapeutique, je vous le dirai et je vous orienterai vers un professionnel de santé. C'est aussi mon rôle.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Comment se passe concrètement une séance&nbsp;?</summary>
-          <div class="faq-answer">
-            <p>Une heure, en visioconférence, en tête à tête. Vous déposez ce qui vous occupe, je vous écoute et je vous pose des questions. Je ne vous dis pas quoi faire et je ne décide pas à votre place&nbsp;: mon travail consiste à vous aider à trouver vos propres réponses.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Et si cela ne me convient pas&nbsp;?</summary>
-          <div class="faq-answer">
-            <p>C'est précisément à cela que sert le premier échange&nbsp;: faire connaissance et vérifier que le courant passe, sans engagement. Si vous préférez en rester là, c'est parfaitement entendu. Et si vous démarrez un accompagnement, vous pouvez l'interrompre à tout moment.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Est-ce confidentiel&nbsp;?</summary>
-          <div class="faq-answer">
-            <p>Oui. Ce que vous me confiez pendant nos séances reste entre nous. Je m'y engage, comme le prévoit le code de déontologie auquel ma certification me rattache.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 8. CTA FINAL ========== -->
-  <section class="final">
+  <!-- ========== PRÊT(E) À VOUS CHOISIR ? ========== -->
+  <section class="final" aria-labelledby="final-title">
     <img class="final-branch" src="illustrations/branch.svg" alt="" width="180" height="220" loading="lazy">
     <span class="halo halo--a"></span>
-    <img class="final-lotus" src="illustrations/lotus.svg" alt="" width="148" height="103" loading="lazy">
-    <p class="final-title">Se choisir soi, ce n'est pas se fermer aux autres. C'est apprendre à ne plus s'oublier.</p>
+    <img class="final-stones" src="illustrations/stones.png" alt="" width="512" height="512" loading="lazy">
+    <p class="eyebrow final-eyebrow">Prêt(e) à vous choisir&nbsp;?</p>
+    <h2 class="final-title" id="final-title">Vous n'avez pas besoin d'avoir toutes les réponses.</h2>
+    <p class="final-text">Vous pouvez simplement commencer par un échange.</p>
     <div class="final-row">
       <a class="btn btn--ivory js-book" href="#" aria-disabled="true">Réserver mon premier échange</a>
-      <span class="final-note">45 minutes · 50 € · sans engagement</span>
+      <span class="final-note">Premier échange · 45 minutes · 50 €</span>
     </div>
   </section>
 
@@ -335,6 +259,7 @@
 
     <a class="foot-mail" id="foot-mail" href="#" hidden></a>
 
+    <p class="foot-sign">Se choisir soi, ce n'est pas se fermer aux autres.<br>C'est apprendre à ne plus s'oublier.</p>
     <span>Amélie Montagné · Coaching individuel</span>
     <span>Se choisir soi</span>
 
@@ -345,7 +270,7 @@
 
 </div>
 
-<!-- ========== Menu mobile ========== -->
+<!-- ========== Menu mobile — identique sur toutes les pages ========== -->
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="menu-top">
     <img class="menu-lockup" src="logo-lockup-ivoire-v2.png" alt="Amélie Montagné" width="600" height="378">
@@ -354,202 +279,16 @@
     </button>
   </div>
   <nav class="menu-links" aria-label="Navigation mobile">
-    <a href="#a-propos">À propos</a>
-    <a href="#approche">Approche</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Accueil</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="accompagnements.html">Mon accompagnement</a>
+    <a href="accompagnements.html#tarifs">Tarifs</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
   </nav>
-  <a class="menu-cta" href="#tarifs">Prendre rendez-vous</a>
+  <a class="menu-cta" href="contact.html">Prendre rendez-vous</a>
 </div>
 
-<script>
-(function () {
-  var navWrap = document.getElementById('nav');
-  var menu    = document.getElementById('menu');
-  var burger  = document.querySelector('.burger');
-  var closeBt = document.querySelector('.menu-close');
-
-  /* --- Etat « scrolled » de la barre (toggle direct : pas de rAF, pas de throttling) --- */
-  var scrolled = null;
-  function onScroll() {
-    var now = window.scrollY > 180;
-    if (now === scrolled) return;
-    scrolled = now;
-    navWrap.classList.toggle('is-scrolled', now);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  /* --- Menu mobile : ouverture, fermeture, verrou du scroll --- */
-  var lastY = 0;
-  function openMenu() {
-    lastY = window.scrollY;
-    menu.classList.add('is-open');
-    burger.setAttribute('aria-expanded', 'true');
-    document.body.style.position = 'fixed';
-    document.body.style.top = -lastY + 'px';
-    document.body.style.width = '100%';
-    closeBt.focus();
-  }
-  function closeMenu() {
-    if (!menu.classList.contains('is-open')) return;
-    menu.classList.remove('is-open');
-    burger.setAttribute('aria-expanded', 'false');
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, lastY);
-  }
-  burger.addEventListener('click', openMenu);
-  closeBt.addEventListener('click', closeMenu);
-  menu.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () { setTimeout(closeMenu, 0); });
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
-  });
-  var mq = window.matchMedia('(min-width: 1024px)');
-  (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(function () {
-    if (mq.matches) closeMenu();
-  });
-
-  /* --- Pied de page : reseaux sociaux et e-mail -----------------------
-     Meme principe que Calendly : tant qu'une valeur contient "REMPLACER",
-     l'element reste masque. Un lien vide vaut moins que pas de lien.
-     ------------------------------------------------------------------- */
-  var RESEAUX = {
-    instagram: 'https://instagram.com/REMPLACER',
-    facebook:  'https://facebook.com/REMPLACER'
-  };
-  var EMAIL_CONTACT = 'REMPLACER@ameliemontagne.fr';
-
-  var social = document.getElementById('foot-social');
-  if (social) {
-    var visibles = 0;
-    social.querySelectorAll('.foot-ico').forEach(function (a) {
-      var url = RESEAUX[a.dataset.net];
-      if (url && url.indexOf('REMPLACER') === -1) {
-        a.href = url;
-        visibles++;
-      } else {
-        a.parentNode.hidden = true;      /* on masque le <li>, pas le lien seul */
-      }
-    });
-    if (visibles) social.hidden = false;
-  }
-
-  var mail = document.getElementById('foot-mail');
-  if (mail && EMAIL_CONTACT.indexOf('REMPLACER') === -1) {
-    mail.href = 'mailto:' + EMAIL_CONTACT;
-    mail.textContent = EMAIL_CONTACT;
-    mail.hidden = false;
-  }
-
-  /* --- Prise de rendez-vous Calendly ---------------------------------
-     UNE SEULE LIGNE A MODIFIER : CALENDLY_URL ci-dessous.
-
-     Tant qu'elle contient "REMPLACER", les boutons restent inertes : mieux
-     vaut un bouton qui ne fait rien qu'un bouton qui mene vers une page
-     Calendly inexistante.
-
-     Le script Calendly n'est telecharge qu'au PREMIER CLIC, jamais au
-     chargement de la page : aucun cookie tiers n'est depose tant que le
-     visiteur ne demande pas explicitement a reserver. C'est ce qui nous
-     dispense d'un bandeau cookies. Ne pas deplacer ce chargement dans le
-     <head> sans rouvrir cette question.
-     ------------------------------------------------------------------- */
-  /* >>> URL DE TEST — A REMPLACER PAR CELLE D'AMELIE AVANT LE LANCEMENT <<< */
-  var CALENDLY_URL = 'https://calendly.com/gadgets-maisons/premier-echange';
-  var bookLinks = document.querySelectorAll('.js-book');
-
-  if (bookLinks.length && CALENDLY_URL.indexOf('REMPLACER') === -1) {
-    var calendlyLoading = null;
-
-    function loadCalendly() {
-      if (calendlyLoading) return calendlyLoading;
-      calendlyLoading = new Promise(function (resolve, reject) {
-        var css = document.createElement('link');
-        css.rel = 'stylesheet';
-        css.href = 'https://assets.calendly.com/assets/external/widget.css';
-        document.head.appendChild(css);
-
-        var js = document.createElement('script');
-        js.src = 'https://assets.calendly.com/assets/external/widget.js';
-        js.async = true;
-        js.onload = resolve;
-        js.onerror = reject;
-        document.head.appendChild(js);
-      });
-      return calendlyLoading;
-    }
-
-    bookLinks.forEach(function (a) {
-      /* href reel : si le JS echoue, le lien reste cliquable normalement */
-      a.setAttribute('href', CALENDLY_URL);
-      a.removeAttribute('aria-disabled');
-
-      a.addEventListener('click', function (e) {
-        e.preventDefault();
-        var label = a.textContent;
-        a.textContent = 'Ouverture…';
-        loadCalendly()
-          .then(function () {
-            a.textContent = label;
-            window.Calendly.initPopupWidget({ url: CALENDLY_URL });
-          })
-          .catch(function () {
-            /* Calendly injoignable : on y va en pleine page plutot que rien */
-            a.textContent = label;
-            window.location.href = CALENDLY_URL;
-          });
-      });
-    });
-  }
-
-  /* --- Liens inertes : maquette sans page secondaire --- */
-  document.querySelectorAll('[aria-disabled="true"]').forEach(function (el) {
-    el.addEventListener('click', function (e) { e.preventDefault(); });
-  });
-
-  /* --- Formulaire de contact : envoi sans quitter la page ---
-     Netlify Forms accepte un POST urlencode sur "/" contenant form-name.
-     Si le JS echoue, le formulaire part en POST classique : rien n'est perdu. */
-  var form = document.querySelector('.contact-form');
-  if (form) {
-    var status = form.querySelector('.cf-status');
-    var submit = form.querySelector('.cf-submit');
-    var labelInitial = submit.textContent;
-
-    form.addEventListener('submit', function (e) {
-      if (!form.checkValidity()) return;          /* laisse le navigateur signaler */
-      e.preventDefault();
-
-      submit.disabled = true;
-      submit.textContent = 'Envoi…';
-      status.className = 'cf-status';
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
-      })
-        .then(function (r) {
-          if (!r.ok) throw new Error(r.status);
-          form.reset();
-          status.textContent = 'Merci, votre message est bien parti. Amélie vous répondra par e-mail.';
-          status.className = 'cf-status is-shown';
-          submit.textContent = 'Message envoyé';
-        })
-        .catch(function () {
-          status.textContent = "L'envoi n'a pas abouti. Réessayez, ou écrivez directement par e-mail.";
-          status.className = 'cf-status is-shown is-error';
-          submit.disabled = false;
-          submit.textContent = labelInitial;
-        });
-    });
-  }
-})();
-</script>
+<script src="site.js"></script>
 </body>
 </html>
