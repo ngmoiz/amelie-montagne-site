@@ -6,6 +6,14 @@
 */
 
 :root {
+  /* Direction artistique Se choisir soi : photo chaude, sauge et accent feutre */
+  --art-cream: #F7F4ED;
+  --art-beige: #F3E8D5;
+  --art-sage: #71806A;
+  --art-sage-light: #A7B29D;
+  --art-pink: #D9A6A0;
+  --art-pink-light: #EED9D4;
+  --art-ink: #30372F;
   /* Verts (couleur de marque) */
   --green-brand:   #555C4C;
   --green-deep:    #4C5343;
