@@ -1374,3 +1374,47 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 @media (max-height:600px) and (max-width:1023px){
   .menu-links{gap:14px;font-size:22px}
 }
+
+/* Finitions de l'accueil : hiérarchie plus lisible et détails éditoriaux.
+   Les valeurs restent indépendantes des réglages du premier écran. */
+.page:has(.hero){
+  --home-body-size:clamp(17px,1.28vw,19px); /* Texte courant sous le hero. */
+  --home-axis-size:clamp(15px,1.12vw,17px); /* Description des cinq axes. */
+}
+.intro p,.meet-text p,.life p,.about-p1,.about-p2{font-size:var(--home-body-size,17px)}
+.intro .lines li,.life .questions li{font-size:18px;line-height:1.8}
+.intro .eyebrow,.meet .eyebrow,.about .eyebrow{font-size:12px;letter-spacing:.17em;color:#586451}
+.intro-in{gap:21px}
+.intro-title{max-width:660px}
+.intro .pull{margin:8px 0 4px}
+.about-p1,.about-p2{max-width:540px}
+.about-visual{box-shadow:12px 17px 0 rgba(217,166,160,.24)}
+.meet .portrait--editorial{box-shadow:-12px 17px 0 rgba(113,128,106,.15)}
+.recognition-list{gap:15px 22px}
+.recognition-list li{padding:20px 24px 20px 32px;border-radius:5px 16px 16px 5px;border-color:rgba(113,128,106,.11);background:rgba(255,253,248,.85);box-shadow:0 5px 16px rgba(48,55,47,.025);font-size:clamp(16px,1.22vw,18px);line-height:1.65}
+.recognition-list li::before{content:"";left:0;top:20px;bottom:20px;width:2px;background:var(--art-pink);border-radius:2px}
+.axes-sec{background:linear-gradient(145deg,#71806A,#687761)}
+.axes-line{display:none}
+.axis-desc{font-size:var(--home-axis-size,16px);line-height:1.75;color:var(--art-cream);max-width:240px}
+.axis-medal{width:76px;height:76px;box-shadow:0 7px 18px rgba(30,34,26,.11)}
+.axis-medal svg{width:30px;height:30px}
+.axis-num{font-size:16px;color:var(--art-pink-light)}
+.statement{background:linear-gradient(135deg,#71806A,#687761)}
+.statement-sub{max-width:700px}
+.life .questions li{color:#4F5D49}
+.final-note{font-size:14px;line-height:1.6}
+.foot-sign{opacity:1}
+@media (min-width:1024px){
+  .axes{gap:0}
+  .axis{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:24px;padding:6px 18px 14px;min-width:0}
+  .axis + .axis{border-left:1px solid rgba(255,253,248,.19)}
+  .axis-body,.axis:nth-child(even) .axis-body{align-self:stretch;padding:0;align-items:center;gap:12px}
+  .axis-title{font-size:clamp(18px,1.45vw,21px);min-height:2.5em;display:flex;align-items:center;justify-content:center}
+}
+@media (max-width:1023px){
+  .axis{gap:22px;padding:27px 0}
+  .axis-medal{width:58px;height:58px}
+  .axis-medal svg{width:25px;height:25px}
+  .axis-desc{max-width:none}
+  .recognition-list li{padding:18px 22px 18px 28px}
+}
