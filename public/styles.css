@@ -842,3 +842,54 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .legal-brand img{height:32px}
   .legal-title{font-size:clamp(32px,9vw,40px)}
 }
+
+/* Hero photographique — éléments éditoriaux placés dans le DOM. */
+.hero{min-height:clamp(720px,64vw,920px);background:#f5e9dc;color:var(--ink);isolation:isolate}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,transparent 36%,rgba(255,248,237,.28) 56%,rgba(255,248,237,.13) 100%)}
+.hero-in{display:block;min-height:inherit;padding:155px 5.5% 120px;position:relative}
+.hero-text{display:flex;align-items:center;text-align:center;gap:0;width:52%;margin-left:auto}
+.hero .eyebrow{position:absolute;top:136px;left:5%;right:5%;color:var(--ink);font-size:11px;letter-spacing:.23em;white-space:normal;text-align:left}
+.hero .eyebrow .rule{display:none}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(54px,6.15vw,90px);line-height:.95;font-weight:400;color:var(--ink);margin-top:22px}
+.hero-title em{position:relative;color:var(--ink);background:none;-webkit-background-clip:initial;background-clip:initial;font-weight:400;z-index:0}
+.hero-title em::before{content:"";position:absolute;z-index:-1;left:-7%;right:-9%;top:38%;height:49%;background:#e8b9a7;opacity:.75;transform:rotate(-3deg);border-radius:36% 21% 37% 18%;}
+.hero-lead{color:var(--ink);max-width:550px;font-family:'Cormorant Garamond',serif;font-size:clamp(19px,1.75vw,26px);line-height:1.18;margin-top:42px}
+.hero-lead::before{content:"";display:block;width:58px;height:1px;background:var(--ink);margin:0 auto 24px}
+.hero-cta{margin-top:30px;justify-content:center}
+.hero-cta .btn{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:0;text-transform:none;padding:15px 36px;background:#555c4c;color:#fffdf8;border-radius:100px}
+.hero-cta .btn span{margin-left:18px}
+.hero-script{position:absolute;right:3%;bottom:20%;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(23px,2.5vw,37px);line-height:.9;transform:rotate(-9deg);text-align:center;color:var(--ink)}
+.hero-script span{display:block;font-size:44px;margin-top:8px}
+.hero-wave{position:absolute;bottom:-1px;left:0;width:100%;height:clamp(65px,9vw,130px);pointer-events:none}
+.hero-wave svg{width:100%;height:100%}
+.nav-wrap:not(.is-scrolled) .nav-bar{background:transparent;border-color:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.nav-wrap:not(.is-scrolled) .nav-links{color:var(--ink);font-family:'Cormorant Garamond',serif;text-transform:none;font-size:21px;letter-spacing:0}
+.nav-wrap:not(.is-scrolled) .nav-links a:hover{color:var(--green-brand)}
+.nav-wrap:not(.is-scrolled) .nav-cta{background:var(--green-brand);color:var(--ivory)}
+.nav-wrap:not(.is-scrolled) .nav-lockup{filter:brightness(.34)}
+.nav-wrap:not(.is-scrolled) .burger span{background:var(--ink)}
+
+@media (max-width:1023px){
+  .hero{min-height:840px;background:#f5e9dc}
+  .hero-photo{object-position:33% center}
+  .hero::before{background:linear-gradient(to bottom,rgba(255,249,239,.74) 0%,rgba(255,249,239,.68) 46%,transparent 83%)}
+  .hero-in{display:block;min-height:840px;padding:125px 22px 100px}
+  .hero-text{display:flex;width:100%;margin:0;gap:0}
+  .hero .eyebrow{position:static;order:0;font-size:9px;letter-spacing:.12em;text-align:center;margin:0 0 28px;line-height:1.6}
+  .hero-title{order:1;font-size:clamp(48px,10vw,72px);margin:0;line-height:.94}
+  .hero-lead{order:2;font-size:23px;line-height:1.16;margin-top:28px}
+  .hero-lead::before{margin-bottom:18px}
+  .hero-cta{order:3;display:flex;align-items:center;margin-top:25px}
+  .hero-cta .btn{width:auto;max-width:100%;padding:15px 24px;font-size:20px}
+  .hero-script{bottom:105px;right:6%;font-size:25px;color:#fffdf8;text-shadow:0 1px 8px #30372f}
+  .hero-script span{font-size:31px}
+  .hero-wave{height:72px}
+}
+@media (max-width:520px){
+  .hero{min-height:780px}
+  .hero-in{min-height:780px;padding-top:110px}
+  .hero-photo{object-position:29% center}
+  .hero-title{font-size:clamp(42px,11vw,58px)}
+  .hero-lead{font-size:20px}
+}
