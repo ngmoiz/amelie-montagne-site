@@ -860,7 +860,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .hero-cta{margin-top:30px;justify-content:center}
 .hero-cta .btn{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:0;text-transform:none;padding:15px 36px;background:#555c4c;color:#fffdf8;border-radius:100px}
 .hero-cta .btn span{margin-left:18px}
-.hero-script{position:absolute;right:5%;top:73%;bottom:auto;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(23px,2.5vw,37px);line-height:.95;transform:rotate(-9deg);text-align:center;color:#30372f;text-shadow:0 1px 12px rgba(255,251,243,.98)}
+.hero-script{position:absolute;right:5%;top:73%;bottom:auto;font-family:'Dancing Script',cursive;font-style:normal;font-weight:400;font-size:clamp(23px,2.5vw,37px);line-height:1.12;transform:rotate(-9deg);text-align:center;color:#30372f;text-shadow:0 1px 12px rgba(255,251,243,.98)}
 .hero-script img{display:block;width:42px;height:auto;margin:8px auto 0;transform:rotate(9deg)}
 .hero-wave{position:absolute;bottom:-1px;left:0;width:100%;height:clamp(65px,9vw,130px);pointer-events:none}
 .hero-wave svg{width:100%;height:100%}
