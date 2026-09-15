@@ -14,6 +14,8 @@
   --art-pink: #D9A6A0;
   --art-pink-light: #EED9D4;
   --art-ink: #30372F;
+  /* Lotus noir fourni : 1 = noir d'origine ; 0.78 l'adoucit pour se fondre dans la teinte du logo. */
+  --hero-lotus-opacity: .78;
   /* Photo principale : 1 = rendu d'origine ; moins de 1 = effet atténué */
   --hero-brightness: 1;
   --hero-saturation: 1;
