@@ -977,7 +977,8 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .hero-brand{position:absolute;z-index:4;top:clamp(25px,3vw,43px);left:6%;width:44%;display:flex;flex-direction:column;align-items:center;color:var(--art-ink);text-align:center;text-shadow:0 1px 12px rgba(255,250,241,.8)}
 .hero-brand-name{font-family:'Dancing Script',cursive;font-size:var(--hero-logo-size);line-height:1.05;white-space:nowrap}
 .hero-brand-sub{font-family:'Jost',sans-serif;font-size:12px;font-weight:400;letter-spacing:.35em;margin-top:6px}
-.hero-brand img{width:30px;height:auto;margin-top:7px}
+/* Le PNG fourni sert de masque : sa teinte suit --art-ink, sans retoucher l'image. */
+.hero-brand-lotus{display:block;width:39px;height:39px;margin-top:3px;background-color:var(--art-ink);-webkit-mask:url('illustrations/lotus-personnel.png') center/contain no-repeat;mask:url('illustrations/lotus-personnel.png') center/contain no-repeat}
 .hero .eyebrow{top:165px;left:4%;right:auto;width:48%;text-align:center;justify-content:center}
 .hero .eyebrow{font-size:11px}
 .hero-in{padding-top:var(--hero-text-start)}
@@ -991,7 +992,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .hero-brand{left:10%;width:80%;top:39px}
   .hero-brand-name{font-size:clamp(36px,7vw,55px)}
   .hero-brand-sub{font-size:11px}
-  .hero-brand img{width:29px}
+  .hero-brand-lotus{width:38px;height:38px}
   .nav-wrap:not(.is-scrolled) .nav-bar{justify-content:flex-end;width:max-content;margin-left:auto;padding:8px;background:rgba(255,253,248,.45);border:1px solid rgba(113,128,106,.14);border-radius:7px}
   .nav-wrap.is-scrolled .nav{width:max-content}
   .nav-wrap.is-scrolled .nav-bar{padding:9px 16px;min-width:62px}
