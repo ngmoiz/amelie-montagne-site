@@ -14,6 +14,9 @@
   --art-pink: #D9A6A0;
   --art-pink-light: #EED9D4;
   --art-ink: #30372F;
+  /* Photo principale : 1 = rendu d'origine ; moins de 1 = effet atténué */
+  --hero-brightness: 1;
+  --hero-saturation: 1;
   /* Verts (couleur de marque) */
   --green-brand:   #555C4C;
   --green-deep:    #4C5343;
