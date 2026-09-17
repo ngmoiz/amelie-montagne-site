@@ -79,24 +79,28 @@
 .step-num{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--ocre-light)}
 .step-title{font-family:'Marcellus',serif;font-size:22px;font-weight:400;color:var(--ivory)}
 .step-desc{font-size:16px;line-height:1.8;color:var(--on-green-soft)}
+/* Réduit la jonction entre la citation et la présentation des formules.
+   Augmenter cette valeur pour laisser davantage de respiration. */
+.prose-sec[aria-labelledby="choisir"]{padding-bottom:0}
+.prose-sec[aria-labelledby="choisir"] + .offers-sec{padding-top:clamp(40px,5vw,64px)}
 .offers-sec{padding:var(--sec-y) var(--sec-x);background:var(--ivory-alt)}
 .offers-intro{margin-bottom:60px}
 .offers-head{max-width:850px;margin:0 auto 42px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px}
 .offers-head .eyebrow{justify-content:center;color:var(--ocre-dark)}
 .offers-meta{font-size:14px;line-height:1.8;color:var(--text)}
-.offers{max-width:1120px;margin:auto;display:flex;flex-direction:column;gap:24px}
-.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px 44px;padding:34px;border:1px solid var(--line);border-radius:16px;color:var(--text)}
+/* Trois cartes verticales sur ordinateur, une seule colonne sur tablette/mobile. */
+.offers{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.offer{display:flex;flex-direction:column;min-width:0;gap:18px;padding:28px 24px;border:1px solid var(--line);border-radius:16px;color:var(--text)}
 .offer:nth-child(2){background:var(--beige)}
-.offer-kicker{grid-column:1;grid-row:1;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ocre-dark)}
-.offer-title{grid-column:1;grid-row:2;font-family:'Marcellus',serif;font-size:24px;line-height:1.35;font-weight:400;color:var(--ink)}
-.offer-price{grid-column:1;grid-row:3;display:flex;flex-direction:column;gap:8px}
+.offer-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ocre-dark)}
+.offer-title{font-family:'Marcellus',serif;font-size:24px;line-height:1.35;font-weight:400;color:var(--ink)}
+.offer-price{display:flex;flex-direction:column;gap:8px}
 .offer-amount{font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1.1;color:var(--ink)}
 .offer-unit{font-size:12px;letter-spacing:.08em;color:var(--text-soft)}
-.offer>p:not(.offer-kicker):not(.offer-price),.offer-list,.offer-btn{grid-column:2}
 .offer>p:not(.offer-kicker):not(.offer-price){font-size:16px;line-height:1.8}
-.offer>p:nth-child(4){grid-row:1 / span 2}
 .offer-list{list-style:disc;padding-left:20px;font-size:16px;line-height:1.8}
-.offer-btn{justify-self:start;margin-top:6px;max-width:100%}
+.offer-btn{align-self:flex-start;margin-top:auto;max-width:100%;text-align:center}
+.offer-price{padding-bottom:20px;margin-bottom:4px;border-bottom:1px solid var(--line)}
 .offer-pull{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:25px!important;color:var(--ink)}
 .first-call{max-width:1120px;margin:38px auto 0;display:flex;align-items:center;justify-content:space-between;gap:26px;border-top:1px solid var(--line);padding-top:30px}
 .first-call-txt{display:flex;flex-direction:column;gap:12px;max-width:650px}
@@ -117,7 +121,8 @@
   .recognition-list,.meet,.story{grid-template-columns:1fr}
   .portrait{min-height:340px}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .offer{display:flex;flex-direction:column;gap:18px;padding:28px 24px}
+  .offers{grid-template-columns:1fr;max-width:740px}
+  .offer{padding:28px 24px}
   .offer-title{font-size:24px}
   .offer-btn{align-self:flex-start}
   .first-call{flex-direction:column;align-items:stretch}
