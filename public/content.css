@@ -138,3 +138,8 @@
   .btn-row .btn{width:100%;padding-left:18px;padding-right:18px}
 }
 @media (max-height:600px) and (max-width:1023px){.menu-links{gap:14px;font-size:22px}}
+
+/* Le point d'interrogation italique dépasse légèrement sa boîte :
+   cette réserve évite sa découpe par le dégradé background-clip:text.
+   La marge négative compense l'espace pour conserver la mise en page. */
+.hero-title em{padding-inline-end:.18em;margin-inline-end:-.18em}
