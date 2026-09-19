@@ -174,3 +174,29 @@
 @media (min-width:1024px){
   .hero-in{row-gap:44px}
 }
+
+/* ---------- Respiration entre « Je peux souffler ici » et « Je suis Amélie » ----------
+   Les deux sections sont ivoire : l'œil ne voit pas deux blocs mais un seul
+   fond continu, sur lequel leurs marges verticales s'additionnent
+   (120px + 120px à 1440px) et creusent un vide que rien ne vient habiter.
+   Mesuré : 303px en 1440, 364px en 390. On resserre, et on pose un filet
+   centré qui marque la transition au lieu de la subir — les autres coutures
+   de la page sont marquées par un changement de fond, celle-ci n'avait rien. */
+.intro{padding-bottom:0}
+.intro::after{
+  content:"";display:block;
+  width:clamp(88px,9vw,132px);height:1px;
+  margin:clamp(44px,4.6vw,66px) auto 0;
+  background:linear-gradient(90deg,transparent,var(--taupe),transparent);
+}
+.about{padding-top:clamp(44px,4.6vw,66px)}
+
+/* Sous 1024px, .about-text passe en display:contents : ses paragraphes
+   deviennent les enfants directs du flex et sont replaces un a un par
+   « order » (1 a 6). La citation de cloture est un ajout de la version
+   actuelle — main n'en avait pas ici — et restait donc a order:0, ce qui
+   la faisait remonter AVANT « A propos » et avant le titre. Elle reprend
+   sa place en fin de section. */
+@media (max-width:1023px){
+  .about .pull{order:6}
+}
