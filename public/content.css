@@ -160,3 +160,17 @@
   position:relative;margin-top:22px;max-width:620px;
   font-size:13px;line-height:1.75;color:var(--on-green-mute);text-align:center;
 }
+
+/* ---------- Hero : écart minimum entre les boutons et les trois bulles ----------
+   .hero-in est une grille de deux rangées en align-content:space-between :
+   l'écart entre les boutons et les bulles n'est que l'espace resté libre
+   sous le min-height de 1000px. À partir de 1440px, .page est plafonné et
+   le contenu occupe toute la hauteur : il ne reste rien à répartir et les
+   bulles viennent toucher les boutons. row-gap impose un plancher.
+   En grille, l'espace réparti se calcule après déduction du row-gap : là où
+   l'espace libre dépasse déjà cette valeur, le rendu ne bouge pas.
+   Limité à la grille : sous 1024px, .hero-in est un flex en colonne et le
+   gap s'appliquerait à tous ses enfants. */
+@media (min-width:1024px){
+  .hero-in{row-gap:44px}
+}
