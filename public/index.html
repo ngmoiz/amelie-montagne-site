@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Amélie Montagné — Coaching individuel · Se choisir soi</title>
-<meta name="description" content="Un espace pour ralentir, déposer ce que vous portez et faire émerger vos propres réponses. Coaching individuel en visioconférence, certifiée Level 2 Coaching Ways.">
+<meta name="description" content="Un espace pour ralentir, prendre du recul et mettre des mots sur ce que vous vivez. Coaching individuel en visioconférence, certifiée Level 2 Coaching Ways.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#474E3F">
 <link rel="icon" href="favicon-v1.png">
@@ -19,23 +19,20 @@
 <body>
 
 <div class="page">
-
-  <!-- ========== NAV — identique sur toutes les pages (sticky, height:0) ========== -->
+  <!-- ========== NAV — page unique, liens par ancres ========== -->
   <div class="nav-wrap" id="nav">
     <header class="nav">
       <div class="nav-bar">
-        <a class="nav-brand" href="index.html">
+        <a class="nav-brand" href="#accueil">
           <img class="nav-lockup" src="logo-lockup-ivoire-v2.png" alt="Amélie Montagné" width="600" height="378">
         </a>
         <nav class="nav-links" aria-label="Navigation principale">
-          <a href="index.html" aria-current="page">Accueil</a>
-          <a href="a-propos.html">À propos</a>
-          <a href="accompagnements.html">Mon accompagnement</a>
-          <a href="accompagnements.html#tarifs">Tarifs</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
+          <a href="#a-propos">À propos</a>
+          <a href="#approche">Mon approche</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
         </nav>
-        <a class="nav-cta" href="contact.html">Rendez-vous</a>
+        <a class="nav-cta js-book" href="#" aria-disabled="true">Prendre rendez-vous</a>
         <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
           <span></span><span></span>
         </button>
@@ -51,14 +48,13 @@
     <div class="hero-in">
       <div class="hero-text">
         <p class="eyebrow eyebrow--hero"><span class="rule"></span>Coaching individuel · Reconnexion à soi · Alignement</p>
-        <h1 class="hero-title">Et si vous commenciez à vous choisir, <em>vous&nbsp;?</em></h1>
-        <p class="hero-lead">Un espace pour ralentir, vous écouter, clarifier ce qui compte vraiment pour vous et avancer vers une vie qui vous ressemble davantage.</p>
+        <h1 class="hero-title">Et si vous commenciez à vous choisir, <em>vous aussi&nbsp;?</em></h1>
+        <p class="hero-lead">Un espace pour ralentir, prendre du recul et mettre des mots sur ce que vous vivez. Un accompagnement en douceur, sans jugement, pour mieux vous écouter et avancer à votre rythme.</p>
         <div class="hero-cta">
-          <a class="btn btn--ivory" href="accompagnements.html">Découvrir mon accompagnement</a>
-          <a class="btn btn--ghost" href="contact.html#book-title">Premier échange · 50 €</a>
+          <a class="btn btn--ivory" href="#approche">Découvrir l'accompagnement</a>
+          <a class="btn btn--ghost js-book" href="#" aria-disabled="true">Premier échange · 45 min</a>
         </div>
       </div>
-
       <div class="hero-visual" aria-hidden="true">
         <div class="hv-ring"><span></span></div>
         <div class="hv-dash"></div>
@@ -74,7 +70,6 @@
         <li><b>Level 2</b><span class="only-desktop">certifiée Coaching Ways</span><span class="only-mobile">certifiée</span></li>
         <li><b>45 min</b><span class="only-desktop">premier échange, sans engagement</span><span class="only-mobile">1er échange</span></li>
       </ul>
-    </div>
   </section>
 
   <!-- ========== 2. BANDEAU ========== -->
@@ -83,78 +78,84 @@
     <p class="only-mobile">valeurs · besoins · confiance · alignement</p>
   </div>
 
-  <!-- ========== 3. INTRODUCTION (brief : suite du hero) ========== -->
-  <section class="intro" aria-labelledby="intro-title">
+  <!-- ========== 3. JE PEUX SOUFFLER ICI ========== -->
+  <section class="intro" aria-labelledby="souffler">
     <div class="intro-in">
-      <h2 class="intro-title" id="intro-title">Vous avancez, vous gérez, vous faites ce qu'il faut.</h2>
-      <ul class="lines">
-        <li>Pour votre travail.</li>
-        <li>Pour vos proches.</li>
-        <li>Pour votre famille.</li>
-        <li>Pour répondre aux attentes.</li>
-      </ul>
-      <p>Et parfois, au milieu de tout cela, une question reste en suspens&nbsp;:</p>
-      <p class="pull">Et moi, qu'est-ce que je veux vraiment&nbsp;?</p>
-      <p>Vous ressentez peut-être le besoin de ralentir, de prendre du recul, de comprendre ce qui se passe en vous ou simplement de déposer ce que vous portez depuis trop longtemps.</p>
-      <p>Vous avez envie de retrouver davantage de confiance, de clarté et d'alignement.</p>
-      <p class="intro-strong">Le coaching peut être cet espace.</p>
-      <p>Un espace pour vous écouter sans jugement, mettre des mots sur vos besoins et vos valeurs, comprendre ce qui vous freine et avancer vers une vie qui vous ressemble davantage.</p>
-      <p class="intro-end">Parce que votre vie vous appartient.</p>
-      <div class="btn-row">
-        <a class="btn btn--green" href="accompagnements.html">Découvrir mon accompagnement</a>
-        <a class="btn btn--line js-book" href="#" aria-disabled="true">Réserver mon premier échange</a>
-      </div>
+      <h2 class="intro-title" id="souffler">«&nbsp;Je peux souffler ici.&nbsp;»</h2>
+      <p>Peut-être avez-vous l'impression de beaucoup réfléchir sans vraiment savoir quelle direction prendre.</p>
+      <p>Peut-être ressentez-vous le besoin de ralentir, de prendre du recul ou simplement d'avoir un espace où vous pouvez déposer ce que vous vivez.</p>
+      <p class="intro-end">Vous n'avez pas besoin d'avoir toutes les réponses pour commencer.</p>
     </div>
   </section>
 
-  <!-- ========== 4. SE CHOISIR SOI ========== -->
-  <section class="statement" aria-labelledby="statement-title">
-    <h2 class="statement-label" id="statement-title">Se choisir soi</h2>
-    <p class="statement-text">Se choisir soi, ce n'est pas penser uniquement à soi.</p>
-    <p class="statement-sub">C'est apprendre à écouter ses besoins, respecter ses valeurs et faire des choix qui nous ressemblent.</p>
-  </section>
-
-  <!-- ========== 5. VOUS VOUS RECONNAISSEZ ? ========== -->
-  <section class="recognition" aria-labelledby="recognition-title">
-    <p class="eyebrow eyebrow--light">Vous vous reconnaissez&nbsp;?</p>
-    <h2 id="recognition-title">Vous avez peut-être <em>l'impression</em> de&nbsp;:</h2>
-    <ul class="recognition-list">
-      <li>Trop réfléchir avant de prendre une décision</li>
-      <li>Douter de vous ou de vos choix</li>
-      <li>Faire passer les besoins des autres avant les vôtres</li>
-      <li>Avoir du mal à dire non</li>
-      <li>Ressentir beaucoup de pression ou de stress</li>
-      <li>Ne plus vraiment savoir ce dont vous avez besoin</li>
-      <li>Traverser une période de changement</li>
-      <li>Vous sentir parfois éloigné(e) de vous-même</li>
-      <li>Avoir envie de changement sans savoir par où commencer</li>
-      <li>Chercher davantage de sens ou d'alignement dans votre vie personnelle ou professionnelle</li>
-    </ul>
-    <p class="recognition-close">Et si vous vous accordiez enfin <em>la même écoute</em> que vous accordez aux autres&nbsp;?</p>
-    <a class="link-under" href="accompagnements.html#approche">Découvrir mon approche</a>
-  </section>
-
-  <!-- ========== 6. UN ESPACE POUR VOUS ========== -->
+  <!-- ========== 4. À PROPOS ========== -->
   <section class="about" id="a-propos">
-    <figure class="about-visual"><span>Photo — portrait d’Amélie</span></figure>
+    <!-- Portrait réel à ajouter lorsqu'il sera disponible. -->
+    <figure class="about-visual"><span>Photo — portrait d'Amélie</span></figure>
     <div class="about-text">
-      <p class="eyebrow eyebrow--light"><span class="rule"></span>Un espace pour vous</p>
-      <h2 class="about-title">Ici, vous pouvez simplement <em>être vous.</em></h2>
-      <p class="about-p1">Le coaching est avant tout un espace pour vous, un espace pour ralentir, prendre du recul. Afin de déposer ce que vous avez besoin de déposer, pour mettre des mots sur ce que vous ressentez. Pour comprendre ce qui se joue en vous, mais tout aussi bien retrouver progressivement votre propre boussole.</p>
-      <p class="about-p2">Je ne suis pas là pour vous dire quoi faire. Je ne vais pas décider à votre place. Je vous accompagne pour que vous puissiez faire émerger vos propres réponses.</p>
-      <p class="about-p2">À travers l'écoute et le questionnement, nous pouvons explorer ensemble vos besoins, vos valeurs, vos ressources, vos envies et ce que vous souhaitez réellement faire évoluer.</p>
-      <a class="link-under" href="accompagnements.html#approche">Découvrir ma méthode</a>
+      <p class="eyebrow eyebrow--light"><span class="rule"></span>À propos</p>
+      <h2 class="about-title">Je suis <em>Amélie.</em></h2>
+      <p class="about-p1">Avant de devenir coach, j'ai moi aussi connu des périodes de questionnement, de changement et de remise en question.</p>
+      <p class="about-p2">Après un parcours en commerce international, j'ai ressenti le besoin de prendre un autre chemin, plus en accord avec ce qui avait du sens pour moi.</p>
+      <p class="about-p2">Ce qui m'a toujours attirée, ce sont les rencontres, les parcours de vie et cette richesse que l'on découvre lorsque l'on accepte de regarder les choses autrement.</p>
+      <p class="about-p2">Aujourd'hui, j'accompagne des femmes et des hommes qui souhaitent mieux se comprendre, prendre du recul et avancer avec davantage de clarté.</p>
+      <p class="pull">Je ne suis pas là pour vous dire qui être. Je suis là pour vous aider à vous écouter.</p>
     </div>
   </section>
 
-  <!-- ========== 7. CE QUE NOUS POUVONS TRAVAILLER ENSEMBLE ========== -->
-  <section class="axes-sec" id="approche">
+  <!-- ========== 5. POURQUOI LE COACHING ? ========== -->
+  <section class="prose-sec prose-sec--beige" aria-labelledby="pourquoi">
+    <div class="prose">
+      <h2 id="pourquoi">Pourquoi le coaching&nbsp;?</h2>
+      <p>L'envie d'accompagner les autres était déjà présente depuis longtemps.</p>
+      <p>J'ai toujours accordé une grande importance aux relations humaines et à la possibilité d'offrir un espace où chacun peut se sentir écouté, accueilli et libre de déposer ce qu'il vit, sans jugement.</p>
+      <p>Le coaching m'a permis de donner un cadre professionnel à cette envie d'accompagner.</p>
+      <p>Je me suis donc formée au coaching et j'ai obtenu ma certification <b>Level 2 Coaching Ways</b>.</p>
+      <p>Cette formation a confirmé une conviction qui guide aujourd'hui ma pratique&nbsp;:</p>
+      <p class="pull">Nous avons souvent plus de réponses en nous que nous ne le pensons.</p>
+      <p>Mon rôle n'est pas de vous dire qui vous devez être, ni de décider à votre place. Je suis là pour vous accompagner à prendre du recul, mettre des mots sur ce que vous vivez et faire émerger vos propres réponses.</p>
+    </div>
+  </section>
+
+  <!-- ========== 6. AUJOURD'HUI ========== -->
+  <section class="prose-sec" aria-labelledby="aujourdhui">
+    <div class="prose">
+      <h2 id="aujourdhui">Aujourd'hui</h2>
+      <p>J'accompagne les femmes et les hommes qui ressentent le besoin de ralentir, de prendre du recul et de se reconnecter à eux-mêmes.</p>
+      <p>Vous traversez peut-être une période de questionnement, un changement, des doutes ou simplement la sensation de vous être éloigné(e) de vous-même.</p>
+      <p>Vous n'avez pas besoin d'arriver avec une problématique parfaitement définie. Vous pouvez simplement venir avec ce que vous ressentez aujourd'hui.</p>
+      <p>Mon intention est de vous offrir un espace doux, bienveillant et sans jugement, dans lequel vous pouvez vous écouter, réfléchir et avancer à votre rythme.</p>
+    </div>
+  </section>
+
+  <!-- ========== 7. SE CHOISIR SOI ========== -->
+  <section class="statement" aria-labelledby="se-choisir">
+    <p class="statement-label">Se choisir soi</p>
+    <h2 class="statement-text" id="se-choisir">Se choisir ne signifie pas penser uniquement à soi.</h2>
+    <p class="statement-sub">Cela signifie apprendre à ne plus s'oublier.</p>
+  </section>
+
+  <!-- ========== 8. MON APPROCHE ========== -->
+  <section class="prose-sec" id="approche" aria-labelledby="approche-title">
+    <div class="prose">
+      <p class="eyebrow eyebrow--light">Mon approche</p>
+      <h2 id="approche-title">Un accompagnement qui <em>part de vous.</em></h2>
+      <p>Chaque séance est un espace de réflexion et d'écoute, construit autour de ce que vous vivez et de ce que vous souhaitez faire évoluer.</p>
+      <p>À travers l'écoute, le questionnement et différents outils de coaching, je vous accompagne pour prendre du recul et mieux comprendre ce qui se joue pour vous.</p>
+      <p>L'objectif n'est pas de vous imposer une direction, mais de vous permettre d'avancer vers ce qui a du sens pour vous.</p>
+      <p>Nous avançons à votre rythme, selon vos besoins et vos objectifs.</p>
+    </div>
+  </section>
+
+  <!-- ========== 9. CE QUE NOUS POUVONS TRAVAILLER ENSEMBLE ========== -->
+  <section class="axes-sec" aria-labelledby="axes-title">
     <span class="halo halo--a"></span>
     <span class="halo halo--b"></span>
 
     <div class="axes-head">
       <p class="eyebrow eyebrow--on-green"><span class="rule"></span>Ensemble<span class="rule"></span></p>
-      <h2 class="axes-title">Ce que nous pouvons travailler ensemble</h2>
+      <h2 class="axes-title" id="axes-title">Ce que nous pouvons travailler ensemble</h2>
+      <p class="axes-sub">Un même fil conducteur&nbsp;: revenir à soi.</p>
     </div>
 
     <div class="axes-wrap">
@@ -167,7 +168,7 @@
           <span class="axis-body">
             <span class="axis-num">01</span>
             <span class="axis-title">Reconnexion à soi</span>
-            <span class="axis-desc">Prendre le temps de vous écouter, de comprendre ce que vous ressentez et de retrouver une relation plus attentive avec vous-même.</span>
+            <span class="axis-desc">Mieux vous écouter et retrouver ce qui compte réellement pour vous.</span>
           </span>
         </li>
         <li class="axis">
@@ -177,7 +178,7 @@
           <span class="axis-body">
             <span class="axis-num">02</span>
             <span class="axis-title">Alignement</span>
-            <span class="axis-desc">Clarifier ce qui compte réellement pour vous et faire davantage coïncider vos choix avec vos valeurs et vos besoins.</span>
+            <span class="axis-desc">Faire des choix plus cohérents avec vos valeurs, vos besoins et vos envies.</span>
           </span>
         </li>
         <li class="axis">
@@ -187,7 +188,7 @@
           <span class="axis-body">
             <span class="axis-num">03</span>
             <span class="axis-title">Confiance en soi</span>
-            <span class="axis-desc">Mieux reconnaître vos ressources, vos capacités et ce qui peut vous permettre d'avancer avec davantage de confiance.</span>
+            <span class="axis-desc">Identifier vos ressources et prendre davantage conscience de vos capacités.</span>
           </span>
         </li>
         <li class="axis">
@@ -197,7 +198,7 @@
           <span class="axis-body">
             <span class="axis-num">04</span>
             <span class="axis-title">Affirmation de soi</span>
-            <span class="axis-desc">Apprendre à exprimer vos besoins, vos limites et vos choix sans vous oublier pour autant.</span>
+            <span class="axis-desc">Exprimer vos besoins, poser vos limites et trouver votre juste place.</span>
           </span>
         </li>
         <li class="axis">
@@ -207,54 +208,131 @@
           <span class="axis-body">
             <span class="axis-num">05</span>
             <span class="axis-title">Choix &amp; changements</span>
-            <span class="axis-desc">Prendre du recul sur une situation personnelle ou professionnelle et retrouver de la clarté pour avancer.</span>
+            <span class="axis-desc">Prendre du recul, clarifier ce que vous souhaitez et avancer avec plus de sérénité.</span>
           </span>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- ========== 8. BONJOUR, MOI C'EST AMÉLIE ========== -->
-  <section class="meet" aria-labelledby="meet-title">
-    <div class="meet-text">
-      <p class="eyebrow eyebrow--light">Bonjour, moi c'est Amélie</p>
-      <h2 class="meet-title" id="meet-title">Avant d'être coach, j'ai moi aussi dû apprendre à <em>m'écouter.</em></h2>
-      <p>Pendant longtemps, j'ai fait certains choix en pensant aux attentes des autres. Jusqu'au jour où j'ai compris que personne ne pouvait vivre ma vie à ma place.</p>
-      <p>C'est cette prise de conscience qui m'a amenée vers le coaching.</p>
-      <p>Aujourd'hui, j'accompagne à mon tour celles et ceux qui ressentent le besoin de ralentir, de prendre du recul et de se reconnecter à eux-mêmes.</p>
-      <a class="link-under" href="a-propos.html">Découvrir mon histoire</a>
-    </div>
-    <!-- Portrait réel à ajouter lorsqu’il sera disponible. -->
-    <figure class="portrait" aria-label="Emplacement réservé au portrait d’Amélie"><figcaption>Photo — portrait d’Amélie</figcaption></figure>
+  <!-- ========== 10. UNE PAUSE POUR VOUS ========== -->
+  <section class="pause" aria-labelledby="pause-title">
+    <p class="eyebrow eyebrow--ocre"><span class="rule"></span>Une pause pour vous</p>
+    <p class="pause-quote" id="pause-title">«&nbsp;Et si vous vous accordiez enfin la même écoute que celle que vous accordez aux autres&nbsp;?&nbsp;»</p>
   </section>
 
-  <!-- ========== 9. VOTRE VIE VOUS APPARTIENT ========== -->
-  <section class="life" aria-labelledby="life-title">
-    <div class="life-in">
-      <h2 class="life-title" id="life-title">Votre vie <em>vous appartient.</em></h2>
-      <p>Les autres peuvent vous conseiller, vous aimer, vous soutenir &amp; partager leur expérience.</p>
-      <p>Mais ils ne vivent pas votre vie, ne ressentent pas vos émotions &amp; ne portent pas vos doutes.</p>
-      <p class="life-strong">C'est vous qui vivez votre histoire.</p>
-      <p>Et peut-être que le premier pas consiste simplement à vous demander&nbsp;:</p>
-      <ul class="questions">
-        <li>Est-ce que je fais cela pour moi ou pour les autres&nbsp;?</li>
-        <li>Est-ce que cette vie me ressemble&nbsp;?</li>
-        <li>Est-ce que je m'écoute réellement&nbsp;?</li>
-      </ul>
+  <!-- ========== 11. UNE QUESTION ? ========== -->
+  <section class="contact" id="contact">
+    <span class="halo halo--a"></span>
+
+    <div class="contact-in">
+      <div class="contact-intro">
+        <p class="eyebrow eyebrow--on-green"><span class="rule"></span>Une question&nbsp;?</p>
+        <h2 class="contact-title">Vous pouvez <em>m'écrire directement.</em></h2>
+        <p class="contact-lead">Vous souhaitez en savoir plus sur le coaching, le déroulement d'une séance ou les différents accompagnements&nbsp;? Je vous répondrai avec plaisir.</p>
+      </div>
+
+      <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="cf-hp"><label>Laissez ce champ vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="cf-head">
+          <span>Écrire à Amélie</span>
+          <span>Sans engagement</span>
+        </div>
+
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="cf-prenom">Prénom</label>
+            <input id="cf-prenom" name="prenom" type="text" autocomplete="given-name" placeholder="Votre prénom" required>
+          </div>
+          <div class="cf-field">
+            <label for="cf-nom">Nom</label>
+            <input id="cf-nom" name="nom" type="text" autocomplete="family-name" placeholder="Votre nom" required>
+          </div>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-email">Adresse e-mail</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="vous@email.com" required>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-message">Votre message</label>
+          <textarea id="cf-message" name="message" rows="3" placeholder="Ce que vous aimeriez savoir…" required></textarea>
+        </div>
+
+        <button class="btn btn--green cf-submit" type="submit">Envoyer ma demande</button>
+        <p class="cf-note">Vos informations ne servent qu'à vous répondre. Elles ne sont ni revendues, ni utilisées pour autre chose.</p>
+        <p class="cf-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
-  <!-- ========== PRÊT(E) À VOUS CHOISIR ? ========== -->
+  <!-- ========== 12. FAQ ========== -->
+  <section class="faq" id="faq">
+    <div class="faq-in">
+      <div class="faq-head">
+        <p class="eyebrow eyebrow--ocre"><span class="rule"></span>Questions fréquentes</p>
+        <h2 class="faq-title">Ce que l'on me demande souvent.</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Combien de séances faut-il&nbsp;?</summary>
+          <div class="faq-answer">
+            <p>Il n'y a pas de nombre défini. Certaines personnes ont besoin de quelques séances, d'autres souhaitent être accompagnées plus longtemps.</p>
+            <p>Nous définissons ensemble le rythme qui vous convient et vous restez libre de l'adapter.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>En quoi le coaching est-il différent d'une psychothérapie&nbsp;?</summary>
+          <div class="faq-answer">
+            <p>Le coaching est tourné vers votre situation actuelle et ce que vous souhaitez faire évoluer. <strong>Il ne soigne pas et ne remplace pas une psychothérapie ou un accompagnement médical.</strong></p>
+            <p>Si votre situation nécessite un accompagnement thérapeutique, je vous orienterai vers le professionnel adapté.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Comment se passe une séance&nbsp;?</summary>
+          <div class="faq-answer">
+            <p>Une séance dure une heure et se déroule en visioconférence.</p>
+            <p>Vous pouvez déposer ce qui vous préoccupe, puis nous explorons ensemble votre situation à travers l'écoute et le questionnement.</p>
+            <p>Mon rôle n'est pas de vous dire quoi faire, mais de vous accompagner dans votre réflexion.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Et si je ne suis pas sûre que le coaching me corresponde&nbsp;?</summary>
+          <div class="faq-answer">
+            <p>C'est justement le rôle du premier échange.</p>
+            <p>Il nous permet de faire connaissance, de comprendre votre besoin et de voir si mon accompagnement peut vous correspondre. Il est sans engagement.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Est-ce confidentiel&nbsp;?</summary>
+          <div class="faq-answer">
+            <p>Oui. Les échanges sont confidentiels et restent dans le cadre de l'accompagnement, dans le respect des principes déontologiques liés à ma pratique.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 13. SE CHOISIR SOI — RÉSERVATION ========== -->
   <section class="final" aria-labelledby="final-title">
     <div class="final-orb" aria-hidden="true"></div>
     <span class="halo halo--a"></span>
-    <p class="eyebrow final-eyebrow">Prêt(e) à vous choisir&nbsp;?</p>
-    <h2 class="final-title" id="final-title">Vous n'avez pas besoin d'avoir toutes les réponses.</h2>
-    <p class="final-text">Vous pouvez simplement commencer par un échange.</p>
+    <p class="eyebrow final-eyebrow">Se choisir soi</p>
+    <h2 class="final-title" id="final-title">Se choisir soi, ce n'est pas se fermer aux autres. C'est apprendre à ne plus s'oublier.</h2>
     <div class="final-row">
       <a class="btn btn--ivory js-book" href="#" aria-disabled="true">Réserver mon premier échange</a>
-      <span class="final-note">Premier échange · 45 minutes · 50 €</span>
+      <span class="final-note">45 minutes · sans engagement</span>
     </div>
+    <!-- Mode de fixation du tarif : exigé dès lors que le prix n'est pas affiché à l'avance. -->
+    <p class="book-terms">Le tarif de l'accompagnement est défini ensemble à l'issue du premier échange, selon le rythme choisi. Annulation ou report possible jusqu'à 48&nbsp;h avant le rendez-vous.</p>
   </section>
 
   <footer class="foot">
@@ -289,14 +367,12 @@
     </button>
   </div>
   <nav class="menu-links" aria-label="Navigation mobile">
-    <a href="index.html">Accueil</a>
-    <a href="a-propos.html">À propos</a>
-    <a href="accompagnements.html">Mon accompagnement</a>
-    <a href="accompagnements.html#tarifs">Tarifs</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
+    <a href="#a-propos">À propos</a>
+    <a href="#approche">Mon approche</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <a class="menu-cta" href="contact.html">Prendre rendez-vous</a>
+  <a class="menu-cta js-book" href="#" aria-disabled="true">Prendre rendez-vous</a>
 </div>
 
 <script src="site.js"></script>

@@ -60,12 +60,16 @@
   /* --- Pied de page : reseaux sociaux et e-mail -----------------------
      Meme principe que Calendly : tant qu'une valeur contient "REMPLACER",
      l'element reste masque. Un lien vide vaut moins que pas de lien.
+
+     DECIDE (sept. 2026) : Amelie n'a pas de reseaux sociaux. Les deux
+     icones restent donc masquees. Le mecanisme est conserve tel quel :
+     le jour ou elle ouvre un compte, il suffit de remplacer l'URL ici.
      ------------------------------------------------------------------- */
   var RESEAUX = {
     instagram: 'https://instagram.com/REMPLACER',
     facebook:  'https://facebook.com/REMPLACER'
   };
-  var EMAIL_CONTACT = 'REMPLACER@ameliemontagne.fr';
+  var EMAIL_CONTACT = 'ameliemcoaching@gmail.com';
 
   var social = document.getElementById('foot-social');
   if (social) {

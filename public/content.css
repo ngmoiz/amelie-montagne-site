@@ -143,3 +143,20 @@
    cette réserve évite sa découpe par le dégradé background-clip:text.
    La marge négative compense l'espace pour conserver la mise en page. */
 .hero-title em{padding-inline-end:.18em;margin-inline-end:-.18em}
+
+/* ---------- Page unique (nouveau document, sept. 2026) ---------- */
+/* « Une pause pour vous » : une seule phrase, beaucoup d'air autour. */
+.pause{
+  padding:var(--sec-y) var(--sec-x);background:var(--beige);
+  display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center;
+}
+.pause .eyebrow{justify-content:center}
+.pause-quote{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
+  font-size:clamp(26px,3.2vw,44px);line-height:1.35;color:var(--ink);max-width:880px;text-wrap:balance;
+}
+/* Mode de fixation du tarif + règle d'annulation, sous le bouton de réservation. */
+.book-terms{
+  position:relative;margin-top:22px;max-width:620px;
+  font-size:13px;line-height:1.75;color:var(--on-green-mute);text-align:center;
+}

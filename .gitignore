@@ -21,3 +21,6 @@ node_modules/
 # qui n'ont pas a se retrouver dans un depot, meme prive.
 CLAUDE.md
 questions-amelie.md
+
+# Les briefs PDF d Amelie : documents sources, restent locaux
+*.pdf
