@@ -228,3 +228,34 @@
 /* Variante « proposee » : la section d'accueil ne garde qu'une phrase, la
    marge haute pleine y serait disproportionnee. */
 .intro--court{padding-top:clamp(48px,5vw,72px)}
+
+/* ---------- Bloc « Se choisir soi » (texte d'Amélie, 20 sept. 2026) ----------
+   Il remplace « Je peux souffler ici » au-dessus d'À propos, et absorbe
+   l'ancienne section 7 dont il reprend mot pour mot les deux dernières
+   phrases — la garder aurait fait doublon.
+   Fond beige et non vert : le hero et le bandeau qui le précèdent sont déjà
+   sombres, trois fonds foncés d'affilée alourdiraient le haut de la page. */
+.choisir{
+  padding:var(--sec-y) var(--sec-x);background:var(--beige);
+  display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center;
+}
+.choisir .eyebrow{justify-content:center}
+.choisir-title{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(30px,3.6vw,50px);line-height:1.2;
+  color:var(--ink);max-width:760px;text-wrap:balance;
+}
+.choisir-list{
+  display:flex;flex-direction:column;gap:10px;
+  font-family:'Marcellus',serif;font-size:clamp(16px,1.5vw,20px);
+  line-height:1.6;color:var(--text);
+}
+.choisir-p{
+  max-width:680px;font-size:clamp(15px,1.2vw,17px);
+  line-height:1.9;color:var(--text-soft);text-wrap:pretty;
+}
+.choisir-end{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(22px,2.4vw,32px);line-height:1.45;
+  color:var(--ocre-dark);max-width:700px;text-wrap:balance;
+}
