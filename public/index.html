@@ -219,7 +219,55 @@
     <p class="pause-quote" id="pause-title">«&nbsp;Et si vous vous accordiez enfin la même écoute que celle que vous accordez aux autres&nbsp;?&nbsp;»</p>
   </section>
 
-  <!-- ========== 11. FAQ ========== -->
+  <!-- ========== 11. UNE QUESTION ? ========== -->
+  <section class="contact" id="contact">
+    <span class="halo halo--a"></span>
+
+    <div class="contact-in">
+      <div class="contact-intro">
+        <p class="eyebrow eyebrow--on-green"><span class="rule"></span>Une question&nbsp;?</p>
+        <h2 class="contact-title">Vous pouvez <em>m'écrire directement.</em></h2>
+        <p class="contact-lead">Vous souhaitez en savoir plus sur le coaching, le déroulement d'une séance ou les différents accompagnements&nbsp;? Je vous répondrai avec plaisir.</p>
+      </div>
+
+      <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="cf-hp"><label>Laissez ce champ vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="cf-head">
+          <span>Écrire à Amélie</span>
+          <span>Sans engagement</span>
+        </div>
+
+        <div class="cf-grid">
+          <div class="cf-field">
+            <label for="cf-prenom">Prénom</label>
+            <input id="cf-prenom" name="prenom" type="text" autocomplete="given-name" placeholder="Votre prénom" required>
+          </div>
+          <div class="cf-field">
+            <label for="cf-nom">Nom</label>
+            <input id="cf-nom" name="nom" type="text" autocomplete="family-name" placeholder="Votre nom" required>
+          </div>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-email">Adresse e-mail</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="vous@email.com" required>
+        </div>
+
+        <div class="cf-field">
+          <label for="cf-message">Votre message</label>
+          <textarea id="cf-message" name="message" rows="3" placeholder="Ce que vous aimeriez savoir…" required></textarea>
+        </div>
+
+        <button class="btn btn--green cf-submit" type="submit">Envoyer ma demande</button>
+        <p class="cf-note">Vos informations ne servent qu'à vous répondre. Elles ne sont ni revendues, ni utilisées pour autre chose.</p>
+        <p class="cf-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== 12. FAQ ========== -->
   <section class="faq" id="faq">
     <div class="faq-in">
       <div class="faq-head">
@@ -268,54 +316,6 @@
           </div>
         </details>
       </div>
-    </div>
-  </section>
-
-  <!-- ========== 12. UNE QUESTION ? ========== -->
-  <section class="contact" id="contact">
-    <span class="halo halo--a"></span>
-
-    <div class="contact-in">
-      <div class="contact-intro">
-        <p class="eyebrow eyebrow--on-green"><span class="rule"></span>Une question&nbsp;?</p>
-        <h2 class="contact-title">Vous pouvez <em>m'écrire directement.</em></h2>
-        <p class="contact-lead">Vous souhaitez en savoir plus sur le coaching, le déroulement d'une séance ou les différents accompagnements&nbsp;? Je vous répondrai avec plaisir.</p>
-      </div>
-
-      <form class="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="cf-hp"><label>Laissez ce champ vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-
-        <div class="cf-head">
-          <span>Écrire à Amélie</span>
-          <span>Sans engagement</span>
-        </div>
-
-        <div class="cf-grid">
-          <div class="cf-field">
-            <label for="cf-prenom">Prénom</label>
-            <input id="cf-prenom" name="prenom" type="text" autocomplete="given-name" placeholder="Votre prénom" required>
-          </div>
-          <div class="cf-field">
-            <label for="cf-nom">Nom</label>
-            <input id="cf-nom" name="nom" type="text" autocomplete="family-name" placeholder="Votre nom" required>
-          </div>
-        </div>
-
-        <div class="cf-field">
-          <label for="cf-email">Adresse e-mail</label>
-          <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="vous@email.com" required>
-        </div>
-
-        <div class="cf-field">
-          <label for="cf-message">Votre message</label>
-          <textarea id="cf-message" name="message" rows="3" placeholder="Ce que vous aimeriez savoir…" required></textarea>
-        </div>
-
-        <button class="btn btn--green cf-submit" type="submit">Envoyer ma demande</button>
-        <p class="cf-note">Vos informations ne servent qu'à vous répondre. Elles ne sont ni revendues, ni utilisées pour autre chose.</p>
-        <p class="cf-status" role="status" aria-live="polite"></p>
-      </form>
     </div>
   </section>
 
