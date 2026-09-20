@@ -159,6 +159,8 @@
 .book-terms{
   position:relative;margin-top:22px;max-width:620px;
   font-size:13px;line-height:1.75;color:var(--on-green-mute);text-align:center;
+  /* Sans balance, « avec vous. » tombait seul sur une ligne. */
+  text-wrap:balance;
 }
 
 /* ---------- Hero : écart minimum entre les boutons et les trois bulles ----------
@@ -200,3 +202,8 @@
 @media (max-width:1023px){
   .about .pull{order:6}
 }
+
+/* « rendez-vous » se coupait sur son trait d'union en fin de ligne
+   (« rendez- » / « vous. ») sur les largeurs etroites. Utilitaire
+   generique, pas un style de section. */
+.nowrap{white-space:nowrap}
