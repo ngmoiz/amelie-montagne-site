@@ -157,7 +157,10 @@
 }
 /* Mode de fixation du tarif + règle d'annulation, sous le bouton de réservation. */
 .book-terms{
-  position:relative;margin-top:22px;max-width:620px;
+  position:relative;margin-top:22px;
+  /* 700px : la 1re phrase mesure 677px, c.est la largeur minimale qui la
+     garde sur UNE ligne sur ordinateur. Ne pas redescendre a 620. */
+  max-width:700px;
   font-size:13px;line-height:1.75;color:var(--on-green-mute);text-align:center;
   /* Sans balance, « avec vous. » tombait seul sur une ligne. */
   text-wrap:balance;
