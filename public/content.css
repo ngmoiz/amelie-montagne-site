@@ -266,3 +266,45 @@
   border-left:1px solid var(--taupe);padding-left:18px;
   font-style:italic;color:var(--text-soft);
 }
+
+/* ---------- FAQ et Contact permutes (20 sept. 2026) ----------
+   L'ordre des sections suit desormais celui du menu : FAQ puis Contact.
+   Mais la sequence devient pause(beige) → FAQ → Contact → final(vert),
+   et le bloc final est sombre par construction. La seule alternance
+   possible est donc : FAQ en SOMBRE, Contact en CLAIR. Les deux sections
+   echangent leurs fonds, et tout ce qui en dependait suit.
+   Les regles restent ici : styles.css garde le design d'origine. */
+
+/* --- FAQ : passe sur fond vert --- */
+.faq{background:var(--green-brand)}
+.faq .eyebrow--ocre{color:var(--ocre-light)}
+.faq .eyebrow--ocre .rule{background:rgba(227,199,154,.55)}
+.faq-title{color:var(--ivory-alt)}
+/* Un filet ivoire pleine opacite serait trop dur sur le vert. */
+.faq-list{border-top-color:rgba(251,248,240,.20)}
+.faq-item{border-bottom-color:rgba(251,248,240,.20)}
+.faq-item summary{color:var(--ivory-alt)}
+.faq-item summary:hover{color:var(--ocre-light)}
+.faq-item summary:focus-visible{outline-color:var(--ocre-light)}
+.faq-item summary::after{
+  background:
+    linear-gradient(var(--ocre-light),var(--ocre-light)) center/15px 1px no-repeat,
+    linear-gradient(var(--ocre-light),var(--ocre-light)) center/1px 15px no-repeat;
+}
+.faq-item[open] summary::after{background-size:0 0, 1px 15px}
+.faq-answer p{color:var(--on-green-soft)}
+.faq-answer strong{color:var(--ivory)}
+
+/* --- Contact : passe sur fond beige --- */
+.contact{background:var(--beige)}
+/* Le halo est un voile clair concu pour le vert : invisible ou sale sur beige. */
+.contact .halo--a{display:none}
+.contact-intro .eyebrow--on-green{color:var(--ocre-dark)}
+.contact-intro .eyebrow--on-green .rule{background:var(--taupe)}
+.contact-title{color:var(--ink)}
+.contact-title em{color:var(--ocre-dark)}
+/* --text-soft tombait a 3,3 de contraste sur le beige : on prend la teinte
+   de corps de texte, celle des paragraphes de FAQ et d'A propos. */
+.contact-lead{color:var(--text)}
+/* La carte ivoire sur beige : deux tons trop proches, le bord la detache. */
+.contact-form{border-color:var(--taupe);box-shadow:0 22px 44px rgba(34,39,30,.12)}
