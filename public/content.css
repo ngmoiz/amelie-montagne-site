@@ -210,3 +210,21 @@
    (« rendez- » / « vous. ») sur les largeurs etroites. Utilitaire
    generique, pas un style de section. */
 .nowrap{white-space:nowrap}
+
+/* ---------- Retours cliente du 20 sept. 2026 ----------
+   Le bloc final n'est plus une citation mais un appel a l'action : un titre,
+   une phrase courte, le bouton, puis les informations pratiques. */
+.final-lead{
+  position:relative;max-width:620px;
+  font-size:clamp(15px,1.3vw,18px);line-height:1.8;
+  color:rgba(253,251,245,.72);text-align:center;text-wrap:balance;
+}
+/* Le pied de page porte desormais deux rangees de liens ; la mention de
+   copyright ferme la page. */
+.foot-copy{
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(251,248,240,.35);text-align:center;margin-top:4px;
+}
+/* Variante « proposee » : la section d'accueil ne garde qu'une phrase, la
+   marge haute pleine y serait disproportionnee. */
+.intro--court{padding-top:clamp(48px,5vw,72px)}
